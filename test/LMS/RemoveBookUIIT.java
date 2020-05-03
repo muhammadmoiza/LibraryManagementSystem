@@ -39,13 +39,42 @@ public class RemoveBookUIIT {
     }
     
     @Test
-    public void RemoveBook() throws InterruptedException {
+    public void RemoveBookTestCase1() throws InterruptedException {
         window.textBox("BookIDTextBox").enterText("201");
         window.button("RemoveButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text().contains("The book is successfully removed"), true);
+    }
+    
+    @Test
+    public void RemoveBookTestCase2() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("20102");
+        window.button("RemoveButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("No book found against this id"), true);
+    }
+    
+    @Test
+    public void RemoveBookTestCase3() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("2a0h1");
+        window.button("RemoveButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void RemoveBookTestCase4() throws InterruptedException {
+        window.button("RemoveButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
     
     @Test

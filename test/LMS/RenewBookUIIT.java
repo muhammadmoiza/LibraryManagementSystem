@@ -58,8 +58,8 @@ public class RenewBookUIIT {
         window.button("RenewBookButton").click();
         
         Thread.sleep(1000);
-        
-        assertEquals(true, true);
+        System.out.println("============================================="+window.label("Error").text());
+        assertEquals(window.label("Error").text().contains("Book issue renewed"), true);
     }
     
     @Test

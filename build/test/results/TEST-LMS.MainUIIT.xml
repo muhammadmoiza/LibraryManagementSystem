@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-6H49DRA" name="LMS.RemoveBookUIIT" skipped="0" tests="5" time="16.824" timestamp="2020-05-03T02:50:45">
+<testsuite errors="0" failures="0" hostname="DESKTOP-6H49DRA" name="LMS.MainUIIT" skipped="0" tests="8" time="30.902" timestamp="2020-05-03T02:45:13">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -8,7 +8,7 @@
     <property name="libs.DataBindingME.src" value="C:\Program Files\NetBeans 8.0.2\mobility\sources\netbeans_databindingme-src.zip" />
     <property name="manifest.custom.codebase" value="" />
     <property name="libs.spring-webmvc4.0.src" value="" />
-    <property name="javac.includes" value="LMS/RemoveBookUIIT.java" />
+    <property name="javac.includes" value="LMS/MainUIIT.java" />
     <property name="ant.core.lib" value="C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar" />
     <property name="ant.file.Library_Management_System" value="C:\Users\itsme\Desktop\Project\build.xml" />
     <property name="javadoc.windowtitle" value="" />
@@ -60,7 +60,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner LMS.RemoveBookUIIT skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\itsme\Desktop\Project\build\test\results\TEST-LMS.RemoveBookUIIT.xml crashfile=C:\Users\itsme\Desktop\Project\build\junitvmwatcher7224888936245291930.properties propsfile=C:\Users\itsme\Desktop\Project\build\junit352876355457979250.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner LMS.MainUIIT skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\itsme\Desktop\Project\build\test\results\TEST-LMS.MainUIIT.xml crashfile=C:\Users\itsme\Desktop\Project\build\junitvmwatcher1138077937847421386.properties propsfile=C:\Users\itsme\Desktop\Project\build\junit7072131042986691340.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -86,7 +86,7 @@
     <property name="libs.jsp-compilation-syscp.classpath" value="C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed" />
     <property name="libs.groovy-all.src" value="" />
-    <property name="test.includes" value="LMS/RemoveBookUIIT.java" />
+    <property name="test.includes" value="LMS/MainUIIT.java" />
     <property name="netbeans.dynamic.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\core\core.jar;C:\Program Files\NetBeans 8.0.2\platform\core\org-openide-filesystems.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\core_ja.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\core_pt_BR.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\core_ru.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\core_zh_CN.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\org-openide-filesystems_ja.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\org-openide-filesystems_pt_BR.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\org-openide-filesystems_ru.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\org-openide-filesystems_zh_CN.jar;C:\Program Files\NetBeans 8.0.2\nb\core\org-netbeans-upgrader.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb_ja.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb_pt_BR.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb_ru.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb_zh_CN.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\org-netbeans-upgrader_ja.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\org-netbeans-upgrader_pt_BR.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\org-netbeans-upgrader_ru.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\org-netbeans-upgrader_zh_CN.jar" />
     <property name="jnlp.enabled" value="false" />
     <property name="java.vm.specification.version" value="1.8" />
@@ -106,7 +106,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="\" />
-    <property name="javac.includesfile.binary" value="C:\Users\itsme\Desktop\Project\null1015224913" />
+    <property name="javac.includesfile.binary" value="C:\Users\itsme\Desktop\Project\null1052125355" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value="C:\Users\itsme\Desktop\sqljdbc4-chs-4.0.2206.100.jar:C:\Users\itsme\Desktop\junit-4.13.jar:C:\Users\itsme\Desktop\hamcrest-core-1.3.jar:C:\Users\itsme\Desktop\assertj-core-3.8.0.jar:C:\Users\itsme\Desktop\assertj-swing-3.8.0.jar:C:\Users\itsme\Desktop\fest-util-1.2.5.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\beansbinding-1.2.1.jar:build/classes:derbyclient-10.2.2.0.jar" />
     <property name="netbeans.buildnumber" value="201411181905" />
@@ -121,7 +121,7 @@
     <property name="libs.jaxb.javadoc" value="C:\Program Files\NetBeans 8.0.2\ide\docs\jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\antlr-2.7.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\bsf-2.3.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-chain-1.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-digester-1.8.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-io-1.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-logging-1.0.4.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-validator-1.3.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\jstl-1.0.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\oro-2.0.8.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\standard-1.0.6.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-core-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-el-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-extras-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-faces-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-tiles-1.3.10.jar" />
     <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
-    <property name="javac.includes.binary" value="C:\Users\itsme\Desktop\Project\build\test\classes\LMS\RemoveBookUIIT.class" />
+    <property name="javac.includes.binary" value="C:\Users\itsme\Desktop\Project\build\test\classes\LMS\MainUIIT.class" />
     <property name="ant.home" value="C:\Program Files\NetBeans 8.0.2\extide\ant" />
     <property name="ant.file.Library_Management_System-impl" value="C:\Users\itsme\Desktop\Project\nbproject\build-impl.xml" />
     <property name="libs.testng.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\testng-6.8.1-dist.jar" />
@@ -422,23 +422,43 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase1" time="3.944" />
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase2" time="3.573" />
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase3" time="3.572" />
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase4" time="2.793" />
-  <testcase classname="LMS.RemoveBookUIIT" name="GoBack" time="2.82" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase1" time="4.271" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase2" time="4.138" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase3" time="3.865" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase4" time="3.332" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase5" time="3.087" />
+  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase1" time="3.652" />
+  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase2" time="3.052" />
+  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase3" time="5.347" />
   <system-out><![CDATA[DB Connected
 1
 100
 No Books on Hold Yet!
-CLEARING NOW!
-PERSON CLEARED!
+2:321
+1:123
+
+Login Successful
 DB Connected
 1
 100
 No Books on Hold Yet!
-CLEARING NOW!
-PERSON CLEARED!
+2:321
+1:123
+100:NewPass!
+
+Sorry! Wrong ID or Password
+DB Connected
+1
+100
+No Books on Hold Yet!
+DB Connected
+1
+100
+No Books on Hold Yet!
+DB Connected
+1
+100
+No Books on Hold Yet!
 DB Connected
 1
 100

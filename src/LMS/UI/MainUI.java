@@ -65,6 +65,7 @@ public class MainUI extends javax.swing.JFrame {
 
         LRB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         LRB.setText(" LOGIN");
+        LRB.setName("LoginRadioButton"); // NOI18N
         LRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LRBActionPerformed(evt);
@@ -109,6 +110,7 @@ public class MainUI extends javax.swing.JFrame {
         LUITB.setName("LUITB"); // NOI18N
 
         LPTB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        LPTB.setName("PTB"); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

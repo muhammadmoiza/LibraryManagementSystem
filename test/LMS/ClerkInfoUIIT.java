@@ -39,12 +39,30 @@ public class ClerkInfoUIIT {
     }
     
     @Test
-    public void ShowClerkInfo() throws InterruptedException {
+    public void ShowClerkInfoTestCase1() throws InterruptedException {
         window.textBox("ClerkIDTextBox").enterText("2");
         window.button("ViewInfoButton").click();
         
         Thread.sleep(1000);        
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text(), "");
+    }
+    
+    @Test
+    public void ShowClerkInfoTestCase2() throws InterruptedException {
+        window.textBox("ClerkIDTextBox").enterText("2000");
+        window.button("ViewInfoButton").click();
+        
+        Thread.sleep(1000);        
+        assertEquals(window.label("Error").text().contains("Invalid clerk id"), true);
+    }
+    
+    @Test
+    public void ShowClerkInfoTestCase3() throws InterruptedException {
+        window.textBox("ClerkIDTextBox").enterText("E2&");
+        window.button("ViewInfoButton").click();
+        
+        Thread.sleep(1000);        
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
     
     @Test

@@ -38,14 +38,78 @@ public class IssueBookUIIT {
     }
     
     @Test
-    public void IssueBook() throws InterruptedException {
+    public void IssueBookTestCase1() throws InterruptedException {
         window.textBox("BookIDTextBox").enterText("200");
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("IssueButton").click();
         
         Thread.sleep(1000);
     
-        assertEquals(true, true);
+        assertEquals((window.label("Error").text().contains("successfully issued") || window.label("Error").text().contains("is already issued")), true);
+    }
+    
+    @Test
+    public void IssueBookTestCase2() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("20000");
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("IssueButton").click();
+        
+        Thread.sleep(1000);
+    
+        assertEquals(window.label("Error").text().contains("Invalid borrower or book id"), true);
+    }
+    
+    @Test
+    public void IssueBookTestCase3() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200#");
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("IssueButton").click();
+        // Throws error on #
+        Thread.sleep(1000);
+    
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void IssueBookTestCase4() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("IssueButton").click();
+        
+        Thread.sleep(1000);
+    
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void IssueBookTestCase5() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.textBox("BorrowerIDTextBox").enterText("100000");
+        window.button("IssueButton").click();
+        
+        Thread.sleep(1000);
+    
+        assertEquals(window.label("Error").text().contains("Invalid borrower or book id"), true);
+    }
+    
+    @Test
+    public void IssueBookTestCase6() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.textBox("BorrowerIDTextBox").enterText("10QW0");
+        window.button("IssueButton").click();
+        
+        Thread.sleep(1000);
+        // Throws error
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void IssueBookTestCase7() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("IssueButton").click();
+        
+        Thread.sleep(1000);
+    
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
     
     @Test

@@ -27,6 +27,7 @@ public class RenewBookUI extends javax.swing.JFrame {
         this.person = person;
         initComponents();
         this.AL.setName("Error");
+        this.AL2.setName("Error1");
     }
 
     /**
@@ -252,7 +253,7 @@ public class RenewBookUI extends javax.swing.JFrame {
                         } catch (SQLException ex) {
                             Logger.getLogger(RenewBookUI.class.getName()).log(Level.SEVERE, null, ex);
                         }
-                        AL2.setText("Book issue renewd");
+                        AL2.setText("Book issue renewed");
                     }
                     else{
                         AL2.setText("No loan found meeting these credentials");

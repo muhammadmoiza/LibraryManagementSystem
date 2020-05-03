@@ -49,9 +49,20 @@ public class MainUIIT {
 
         assertEquals(true, true);
     }
-
+    
     @Test
     public void AdminLoginTestCase2() throws InterruptedException {
+        // Successful login
+        window.radioButton("MainAdminLoginRadioButton").check();
+        window.button("LoginButton").click();
+        
+        Thread.sleep(1000);
+
+        assertEquals(window.label("Error").text().contains("Field cannot be empty"), true);
+    }
+    
+    @Test
+    public void AdminLoginTestCase3() throws InterruptedException {
         // Wrong Master Password
         window.radioButton("MainAdminLoginRadioButton").check();
         window.textBox("LUITB").enterText("sdfdskfjkasdfkljk");
@@ -59,7 +70,69 @@ public class MainUIIT {
         
         Thread.sleep(1000);
 
+        assertEquals(window.label("Error").text().contains("Incorrect Password"), true);
+    }
+    
+    @Test
+    public void OtherUserLoginTestCase1() throws InterruptedException {
+        // Successful login
+        window.radioButton("LoginRadioButton").check();
+        window.textBox("LUITB").enterText("1");
+        window.textBox("PTB").enterText("123");
+        window.button("LoginButton").click();
+        
+        Thread.sleep(1000);
+
         assertEquals(true, true);
+    }
+    
+    @Test
+    public void OtherUserLoginTestCase2() throws InterruptedException {
+        // Successful login
+        window.radioButton("LoginRadioButton").check();
+        window.textBox("LUITB").enterText("11111");
+        window.textBox("PTB").enterText("123");
+        window.button("LoginButton").click();
+        
+        Thread.sleep(1000);
+        assertEquals(window.label("Error").text().contains("Incorrect User Id or Password"), true);
+    }
+    
+    @Test
+    public void OtherUserLoginTestCase3() throws InterruptedException {
+        // Successful login
+        window.radioButton("LoginRadioButton").check();
+        window.textBox("LUITB").enterText("a1b");
+        window.textBox("PTB").enterText("123");
+        window.button("LoginButton").click();
+        
+        Thread.sleep(1000);
+
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void OtherUserLoginTestCase4() throws InterruptedException {
+        // Successful login
+        window.radioButton("LoginRadioButton").check();
+        window.textBox("PTB").enterText("123");
+        window.button("LoginButton").click();
+        
+        Thread.sleep(1000);
+
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void OtherUserLoginTestCase5() throws InterruptedException {
+        // Successful login
+        window.radioButton("LoginRadioButton").check();
+        window.textBox("LUITB").enterText("1");
+        window.button("LoginButton").click();
+        
+        Thread.sleep(1000);
+
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
     
     @After

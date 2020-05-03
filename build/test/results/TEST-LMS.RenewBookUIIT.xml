@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="DESKTOP-6H49DRA" name="LMS.RenewBookUIIT" skipped="0" tests="3" time="12.37" timestamp="2020-05-02T19:01:36">
+<testsuite errors="0" failures="1" hostname="DESKTOP-6H49DRA" name="LMS.RenewBookUIIT" skipped="0" tests="1" time="5.958" timestamp="2020-05-03T02:57:54">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -39,6 +39,7 @@
     <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
     <property name="libs.javac-api.javadoc" value="" />
     <property name="os.name" value="Windows 10" />
+    <property name="test.class" value="LMS.RenewBookUIIT" />
     <property name="libs.beans-binding.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\beansbinding-1.2.1.jar" />
     <property name="libs.javaee-endorsed-api-7.0.maven-pom" value="" />
     <property name="ap.proc.none.internal" value="" />
@@ -60,7 +61,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner LMS.RenewBookUIIT skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\itsme\Desktop\Project\build\test\results\TEST-LMS.RenewBookUIIT.xml crashfile=C:\Users\itsme\Desktop\Project\build\junitvmwatcher7602126287960078178.properties propsfile=C:\Users\itsme\Desktop\Project\build\junit829439021620415048.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner LMS.RenewBookUIIT methods=RenewBookIssue skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\itsme\Desktop\Project\build\test\results\TEST-LMS.RenewBookUIIT.xml crashfile=C:\Users\itsme\Desktop\Project\build\junitvmwatcher6979504010488602524.properties propsfile=C:\Users\itsme\Desktop\Project\build\junit444386806074849032.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -85,8 +86,8 @@
     <property name="libs.javaee-web-api-6.0.src" value="" />
     <property name="libs.jsp-compilation-syscp.classpath" value="C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\jstl-impl.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\jsf-2_2\javax.faces.jar" />
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\endorsed" />
+    <property name="test.method" value="RenewBookIssue" />
     <property name="libs.groovy-all.src" value="" />
-    <property name="test.includes" value="LMS/RenewBookUIIT.java" />
     <property name="netbeans.dynamic.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\core\core.jar;C:\Program Files\NetBeans 8.0.2\platform\core\org-openide-filesystems.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\core_ja.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\core_pt_BR.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\core_ru.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\core_zh_CN.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\org-openide-filesystems_ja.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\org-openide-filesystems_pt_BR.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\org-openide-filesystems_ru.jar;C:\Program Files\NetBeans 8.0.2\platform\core\locale\org-openide-filesystems_zh_CN.jar;C:\Program Files\NetBeans 8.0.2\nb\core\org-netbeans-upgrader.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb_ja.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb_pt_BR.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb_ru.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\core_nb_zh_CN.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\org-netbeans-upgrader_ja.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\org-netbeans-upgrader_pt_BR.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\org-netbeans-upgrader_ru.jar;C:\Program Files\NetBeans 8.0.2\nb\core\locale\org-netbeans-upgrader_zh_CN.jar" />
     <property name="jnlp.enabled" value="false" />
     <property name="java.vm.specification.version" value="1.8" />
@@ -106,7 +107,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="\" />
-    <property name="javac.includesfile.binary" value="C:\Users\itsme\Desktop\Project\null1786585970" />
+    <property name="javac.includesfile.binary" value="C:\Users\itsme\Desktop\Project\null1064183467" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value="C:\Users\itsme\Desktop\sqljdbc4-chs-4.0.2206.100.jar:C:\Users\itsme\Desktop\junit-4.13.jar:C:\Users\itsme\Desktop\hamcrest-core-1.3.jar:C:\Users\itsme\Desktop\assertj-core-3.8.0.jar:C:\Users\itsme\Desktop\assertj-swing-3.8.0.jar:C:\Users\itsme\Desktop\fest-util-1.2.5.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\beansbinding-1.2.1.jar:build/classes:derbyclient-10.2.2.0.jar" />
     <property name="netbeans.buildnumber" value="201411181905" />
@@ -120,6 +121,7 @@
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="C:\Program Files\NetBeans 8.0.2\ide\docs\jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\antlr-2.7.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\bsf-2.3.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-chain-1.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-digester-1.8.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-io-1.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-logging-1.0.4.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-validator-1.3.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\jstl-1.0.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\oro-2.0.8.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\standard-1.0.6.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-core-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-el-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-extras-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-faces-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-tiles-1.3.10.jar" />
+    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="javac.includes.binary" value="C:\Users\itsme\Desktop\Project\build\test\classes\LMS\RenewBookUIIT.class" />
     <property name="ant.home" value="C:\Program Files\NetBeans 8.0.2\extide\ant" />
     <property name="ant.file.Library_Management_System-impl" value="C:\Users\itsme\Desktop\Project\nbproject\build-impl.xml" />
@@ -157,7 +159,7 @@
     <property name="libs.primefaces.javadoc" value="" />
     <property name="libs.spring-framework300.maven-pom" value="" />
     <property name="run.test.classpath" value="C:\Users\itsme\Desktop\sqljdbc4-chs-4.0.2206.100.jar:C:\Users\itsme\Desktop\junit-4.13.jar:C:\Users\itsme\Desktop\hamcrest-core-1.3.jar:C:\Users\itsme\Desktop\assertj-core-3.8.0.jar:C:\Users\itsme\Desktop\assertj-swing-3.8.0.jar:C:\Users\itsme\Desktop\fest-util-1.2.5.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\beansbinding-1.2.1.jar:build/classes:derbyclient-10.2.2.0.jar:build/test/classes" />
-    <property name="ant.project.invoked-targets" value="test-single" />
+    <property name="ant.project.invoked-targets" value="test-single-method" />
     <property name="test.binaryexcludes" value="" />
     <property name="libs.swing-layout.javadoc" value="C:\Program Files\NetBeans 8.0.2\platform\docs\swing-layout-1.0.4-doc.zip" />
     <property name="sun.java2d.dpiaware" value="true" />
@@ -287,13 +289,13 @@
     <property name="javadoc.version" value="false" />
     <property name="libs.MySQLDriver.javadoc" value="" />
     <property name="org.openide.version" value="deprecated" />
-    <property name="platform.java" value="C:\Program Files\Java\jdk1.8.0_181\jre/bin/java" />
     <property name="source.encoding" value="UTF-8" />
+    <property name="platform.java" value="C:\Program Files\Java\jdk1.8.0_181\jre/bin/java" />
     <property name="ap.cmd.line.internal" value="" />
     <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
     <property name="libs.jsp-compilation-syscp.javadoc" value="" />
-    <property name="libs.javaee-endorsed-api-7.0.classpath" value="C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\javax.annotation-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\javax.xml.soap-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jaxws-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jsr181-api.jar" />
     <property name="libs.eclipselinkmodelgen.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-7.0.classpath" value="C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\javax.annotation-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\javax.xml.soap-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jaxws-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jsr181-api.jar" />
     <property name="libs.metro.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\metro-1.4-doc.zip" />
     <property name="libs.struts.maven-pom" value="" />
     <property name="netbeans.home+have.tests" value="true" />
@@ -303,10 +305,10 @@
     <property name="work.dir" value="C:\Users\itsme\Desktop\Project" />
     <property name="libs.jaxb.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb1-impl.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
     <property name="do.depend" value="false" />
-    <property name="dist.javadoc.dir" value="dist/javadoc" />
     <property name="libs.j2me_common_ant.classpath" value="C:\Program Files\NetBeans 8.0.2\mobility\modules\org-netbeans-modules-j2me-common-ant.jar;C:\Program Files\NetBeans 8.0.2\java\modules\org-netbeans-modules-classfile.jar" />
-    <property name="libs.swing-layout.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\swing-layout-1.0.4.jar" />
+    <property name="dist.javadoc.dir" value="dist/javadoc" />
     <property name="libs.spring-webmvc3.0.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-webmvc-3.2.7.RELEASE.jar" />
+    <property name="libs.swing-layout.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\swing-layout-1.0.4.jar" />
     <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
     <property name="libs.restlib.src" value="" />
     <property name="javac.source" value="1.8" />
@@ -315,7 +317,7 @@
     <property name="java.specification.version" value="1.8" />
     <property name="java.vm.info" value="mixed mode" />
     <property name="libs.jaxws21.maven-pom" value="" />
-    <property name="nb.junit.batch" value="true" />
+    <property name="nb.junit.batch" value="false" />
     <property name="junit.forkmode" value="perTest" />
     <property name="ant.file.type.Library_Management_System" value="file" />
     <property name="file.reference.hamcrest-core-1.3.jar" value="C:\Users\itsme\Desktop\hamcrest-core-1.3.jar" />
@@ -333,7 +335,6 @@
     <property name="libs.jsf12.src" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.maven-pom" value="" />
     <property name="libs.struts.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\struts-1.3.10-javadoc.zip" />
-    <property name="ignore.failing.tests" value="true" />
     <property name="libs.javaee-web-api-7.0.src" value="" />
     <property name="libs.primefaces.src" value="" />
     <property name="dist.dir" value="dist" />
@@ -350,25 +351,25 @@
     <property name="java.runtime.version" value="1.8.0_181-b13" />
     <property name="default.javac.target" value="1.8" />
     <property name="user.timezone" value="" />
-    <property name="nb.junit.single" value="false" />
+    <property name="nb.junit.single" value="true" />
     <property name="do.jar" value="true" />
-    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
     <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
     <property name="netbeans.dirs" value="C:\Program Files\NetBeans 8.0.2\nb;C:\Program Files\NetBeans 8.0.2\ergonomics;C:\Program Files\NetBeans 8.0.2\ide;C:\Program Files\NetBeans 8.0.2\extide;C:\Program Files\NetBeans 8.0.2\java;C:\Program Files\NetBeans 8.0.2\apisupport;C:\Program Files\NetBeans 8.0.2\webcommon;C:\Program Files\NetBeans 8.0.2\websvccommon;C:\Program Files\NetBeans 8.0.2\enterprise;C:\Program Files\NetBeans 8.0.2\mobility;C:\Program Files\NetBeans 8.0.2\profiler;C:\Program Files\NetBeans 8.0.2\python;C:\Program Files\NetBeans 8.0.2\php;C:\Program Files\NetBeans 8.0.2\identity;C:\Program Files\NetBeans 8.0.2\harness;C:\Program Files\NetBeans 8.0.2\cnd;C:\Program Files\NetBeans 8.0.2\dlight;C:\Program Files\NetBeans 8.0.2\groovy;C:\Program Files\NetBeans 8.0.2\extra;C:\Program Files\NetBeans 8.0.2\javacard;C:\Program Files\NetBeans 8.0.2\javafx" />
-    <property name="libs.jsf20.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
     <property name="libs.jstl.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.jsf20.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
     <property name="libs.metro.src" value="" />
     <property name="endorsed.classpath" value="" />
     <property name="libs.absolutelayout.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\AbsoluteLayout.jar" />
     <property name="excludes" value="" />
-    <property name="libs.metro.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-extra-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-extra.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-rt.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-tools.jar" />
     <property name="libs.restlib.maven-pom" value="" />
+    <property name="libs.metro.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-extra-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-extra.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-rt.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-tools.jar" />
     <property name="config" value="1" />
     <property name="libs.jpa2-persistence.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
     <property name="libs.DataBindingME.javadoc" value="C:\Program Files\NetBeans 8.0.2\mobility\modules\docs\netbeans_databindingme-api.zip" />
-    <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="java.class.path" value="C:\Users\itsme\Desktop\sqljdbc4-chs-4.0.2206.100.jar;C:\Users\itsme\Desktop\junit-4.13.jar;C:\Users\itsme\Desktop\hamcrest-core-1.3.jar;C:\Users\itsme\Desktop\assertj-core-3.8.0.jar;C:\Users\itsme\Desktop\assertj-swing-3.8.0.jar;C:\Users\itsme\Desktop\fest-util-1.2.5.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\beansbinding-1.2.1.jar;C:\Users\itsme\Desktop\Project\build\classes;C:\Users\itsme\Desktop\Project\derbyclient-10.2.2.0.jar;C:\Users\itsme\Desktop\Project\build\test\classes;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-junit4.jar" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
     <property name="do.mkdist" value="true" />
     <property name="libs.absolutelayout.src" value="" />
     <property name="libs.jpa20-persistence.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar" />
@@ -385,7 +386,7 @@
     <property name="ant.file.type.Library_Management_System-impl" value="file" />
     <property name="libs.restlib.javadoc" value="" />
     <property name="libs.JAXB-ENDORSED.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\api\jaxb-api.jar" />
-    <property name="nb.internal.action.name" value="test.single" />
+    <property name="nb.internal.action.name" value="run.single.method" />
     <property name="libs.javaee-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
     <property name="libs.eclipselink.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\eclipselink\eclipselink.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\eclipselink\org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" />
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
@@ -400,13 +401,13 @@
     <property name="dist.archive.excludes" value="" />
     <property name="libs.testng.javadoc" value="C:\Program Files\NetBeans 8.0.2\platform\docs\testng-6.8.1-javadoc.zip" />
     <property name="libs.DataBindingME-PIM.src" value="C:\Program Files\NetBeans 8.0.2\mobility\sources\netbeans_databindingme_pim-src.zip" />
-    <property name="libs.PostgreSQLDriver.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\postgresql-9.2-1002.jdbc4.jar" />
     <property name="user.script" value="" />
+    <property name="libs.PostgreSQLDriver.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\postgresql-9.2-1002.jdbc4.jar" />
     <property name="libs.jsf12.maven-pom" value="" />
     <property name="jnlp.signing" value="" />
     <property name="libs.hibernate4-persistencemodelgen.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\hibernate-jpamodelgen-4.3.1.Final.jar" />
-    <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
     <property name="jnlp.signed" value="false" />
+    <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
     <property name="main.class" value="LMS.Main" />
     <property name="libs.CopyLibs.src" value="" />
     <property name="build.dir" value="build" />
@@ -421,29 +422,22 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssue" time="6.052" />
-  <testcase classname="LMS.RenewBookUIIT" name="GetBooks" time="3.36" />
-  <testcase classname="LMS.RenewBookUIIT" name="GoBack" time="2.796" />
+  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssue" time="5.835">
+    <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
+	at LMS.RenewBookUIIT.RenewBookIssue(RenewBookUIIT.java:62)
+</failure>
+  </testcase>
   <system-out><![CDATA[DB Connected
 1
 100
 No Books on Hold Yet!
 
-The deadline of the book Thesaurus has been extended.
+The deadline of the book New Book Title has been extended.
 Issued Book is successfully renewed!
 
-DB Connected
-1
-
-Sorry, the library already has one librarian. New Librarian can't be created.
-100
-No Books on Hold Yet!
-DB Connected
-1
-
-Sorry, the library already has one librarian. New Librarian can't be created.
-100
-No Books on Hold Yet!
+CLEARING NOW!
+PERSON CLEARED!
+=============================================
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
