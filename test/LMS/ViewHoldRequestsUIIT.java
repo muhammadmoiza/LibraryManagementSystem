@@ -22,7 +22,7 @@ public class ViewHoldRequestsUIIT {
     private FrameFixture window;
     private GuiActionRunner runner;
     private LMS.GUIHandler handler;
-
+  
     @BeforeClass
     public static void setUpOnce() {
         FailOnThreadViolationRepaintManager.install();

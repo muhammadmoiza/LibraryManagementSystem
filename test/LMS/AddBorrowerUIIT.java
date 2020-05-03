@@ -18,7 +18,7 @@ import org.junit.BeforeClass;
  *
  * @author itsme
  */
-public class AddBorrowerUIIT {
+public final class AddBorrowerUIIT {
     private FrameFixture window;
     private GuiActionRunner runner;
     private LMS.GUIHandler handler;
