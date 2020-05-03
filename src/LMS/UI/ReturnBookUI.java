@@ -27,6 +27,7 @@ public class ReturnBookUI extends javax.swing.JFrame {
         this.person = person;
         initComponents();
         this.AL.setName("Error");
+        this.AL2.setName("Error1");
     }
 
     /**

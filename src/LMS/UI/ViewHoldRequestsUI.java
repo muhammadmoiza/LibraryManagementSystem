@@ -158,7 +158,7 @@ public class ViewHoldRequestsUI extends javax.swing.JFrame {
                         TA.setText(b.printHoldRequests());
                     }
                     else{
-                        AL.setText("Invalid boook id");
+                        AL.setText("Invalid book id");
                     }
                 }
                 else{

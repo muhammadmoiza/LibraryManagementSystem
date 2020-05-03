@@ -39,12 +39,38 @@ public class ViewHoldRequestsUIIT {
     }
     
     @Test
-    public void ViewHoldRequests() throws InterruptedException {
+    public void ViewHoldRequestsTestCase1() throws InterruptedException {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("ViewRequestsButton").click();
         
         Thread.sleep(1000);
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text(), "");
+    }
+    
+    @Test
+    public void ViewHoldRequestsTestCase2() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("220022");
+        window.button("ViewRequestsButton").click();
+        
+        Thread.sleep(1000);
+        assertEquals(window.label("Error").text().contains("Invalid book id"), true);
+    }
+    
+    @Test
+    public void ViewHoldRequestsTestCase3() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("2A0A0");
+        window.button("ViewRequestsButton").click();
+        
+        Thread.sleep(1000);
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void ViewHoldRequestsTestCase4() throws InterruptedException {
+        window.button("ViewRequestsButton").click();
+        
+        Thread.sleep(1000);
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
     
     @Test

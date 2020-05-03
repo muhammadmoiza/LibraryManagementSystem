@@ -85,6 +85,7 @@ public class SearchBookUI extends javax.swing.JFrame {
         TA.setColumns(20);
         TA.setFont(new java.awt.Font("Monospaced", 0, 24)); // NOI18N
         TA.setRows(5);
+        TA.setName("SearchBox"); // NOI18N
         jScrollPane1.setViewportView(TA);
 
         TRB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N

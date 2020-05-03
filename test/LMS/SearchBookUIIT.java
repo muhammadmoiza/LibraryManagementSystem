@@ -39,36 +39,68 @@ public class SearchBookUIIT {
     }
     
     @Test
-    public void SearchBookTitle() throws InterruptedException {
+    public void SearchBookTitleTestCase1() throws InterruptedException {
         window.radioButton("TitleRadioButton").check();
         window.textBox("SearchFilterTextBox").enterText("Dic");
         window.button("SearchButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text(), "");
     }
     
     @Test
-    public void SearchBookAuthor() throws InterruptedException {
+    public void SearchBookTitleTestCase2() throws InterruptedException {
+        window.radioButton("TitleRadioButton").check();
+        window.button("SearchButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.textBox("SearchBox").text().contains("No field(s) can be empty"), true);
+    }
+    
+    @Test
+    public void SearchBookAuthorTestCase1() throws InterruptedException {
         window.radioButton("AuthorRadioButton").check();
         window.textBox("SearchFilterTextBox").enterText("Neil");
         window.button("SearchButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text(), "");
     }
     
     @Test
-    public void SearchBookSubject() throws InterruptedException {
+    public void SearchBookAuthorTestCase2() throws InterruptedException {
+        window.radioButton("AuthorRadioButton").check();
+        window.textBox("SearchFilterTextBox");
+        window.button("SearchButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.textBox("SearchBox").text().contains("No field(s) can be empty"), true);
+    }
+    
+    @Test
+    public void SearchBookSubjectTestCase1() throws InterruptedException {
         window.radioButton("SubjectRadioButton").check();
         window.textBox("SearchFilterTextBox").enterText("Misc");
         window.button("SearchButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text(), "");
+    }
+    
+    @Test
+    public void SearchBookSubjectTestCase2() throws InterruptedException {
+        window.radioButton("SubjectRadioButton").check();
+        window.textBox("SearchFilterTextBox");
+        window.button("SearchButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.textBox("SearchBox").text().contains("No field(s) can be empty"), true);
     }
     
     @Test

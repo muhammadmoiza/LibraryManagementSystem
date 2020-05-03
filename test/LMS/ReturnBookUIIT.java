@@ -39,17 +39,46 @@ public class ReturnBookUIIT {
     }
     
     @Test
-    public void GetBooks() throws InterruptedException {
+    public void GetBooksTestCase1() throws InterruptedException {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("GetBooksButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text(), "");
     }
     
     @Test
-    public void ReturnBookIssue() throws InterruptedException {
+    public void GetBooksTestCase2() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("10101");
+        window.button("GetBooksButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Invalid borrower id"), true);
+    }
+    
+    @Test
+    public void GetBooksTestCase3() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100a");
+        window.button("GetBooksButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void GetBooksTestCase4() throws InterruptedException {
+        window.button("GetBooksButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void ReturnBookIssueTestCase1() throws InterruptedException {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("GetBooksButton").click();
         
@@ -58,8 +87,48 @@ public class ReturnBookUIIT {
         window.button("ReturnBookButton").click();
         
         Thread.sleep(1000);
+        assertEquals(window.label("Error1").text().contains("Book returned"), true);
+    }
+    
+    @Test
+    public void ReturnBookIssueTestCase2() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("GetBooksButton").click();
         
-        assertEquals(true, true);
+        Thread.sleep(1000);
+        window.textBox("BookIDTextBox").enterText("222000");
+        window.button("ReturnBookButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Invalid borrower id or book id"), true);
+    }
+    
+    @Test
+    public void ReturnBookIssueTestCase3() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("GetBooksButton").click();
+        
+        Thread.sleep(1000);
+        window.textBox("BookIDTextBox").enterText("2EW00");
+        window.button("ReturnBookButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void ReturnBookIssueTestCase4() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("GetBooksButton").click();
+        
+        Thread.sleep(1000);
+        window.button("ReturnBookButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
     
     @Test

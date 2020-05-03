@@ -39,23 +39,81 @@ public class TotalFineUIIT {
     }
     
     @Test
-    public void ComputeTotalFine() throws InterruptedException {
+    public void ComputeTotalFineTestCase1() throws InterruptedException {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("ComputeTotalFineButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text().contains("Your total fine is"), true);
     }
     
     @Test
-    public void PayNow() throws InterruptedException {
+    public void ComputeTotalFineTestCase2() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("10001");
+        window.button("ComputeTotalFineButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error1").text().contains("Invalid borrower id"), true);
+    }
+    
+    @Test
+    public void ComputeTotalFineTestCase3() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100qwe");
+        window.button("ComputeTotalFineButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error1").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void ComputeTotalFineTestCase4() throws InterruptedException {
+        window.button("ComputeTotalFineButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error1").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void PayNowTestCase1() throws InterruptedException {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("PaidNowButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text().contains("Your total fine is"), true);
+    }
+    
+    @Test
+    public void PayNowTestCase2() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("10110");
+        window.button("PaidNowButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error1").text().contains("Invalid borrower id"), true);
+    }
+    
+    @Test
+    public void PayNowTestCase3() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("10ssaf0");
+        window.button("PaidNowButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error1").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void PayNowTestCase4() throws InterruptedException {
+        window.button("PaidNowButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error1").text().contains("Field(s) cannot be empty"), true);
     }
     
     @Test
