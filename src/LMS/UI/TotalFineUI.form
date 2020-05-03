@@ -146,6 +146,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="24" style="0"/>
             </Property>
+            <Property name="name" type="java.lang.String" value="BorrowerIDTextBox" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="CTFB">
@@ -154,6 +155,7 @@
               <Font name="Tahoma" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="COMPUTE TOTAL FINE"/>
+            <Property name="name" type="java.lang.String" value="ComputeTotalFineButton" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CTFBActionPerformed"/>
@@ -184,6 +186,7 @@
               <Font name="Tahoma" size="24" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="PAID NOW"/>
+            <Property name="name" type="java.lang.String" value="PaidNowButton" noResource="true"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PNBActionPerformed"/>

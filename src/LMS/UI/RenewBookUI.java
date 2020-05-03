@@ -26,6 +26,7 @@ public class RenewBookUI extends javax.swing.JFrame {
         this.handler = handler;
         this.person = person;
         initComponents();
+        this.AL.setName("Error");
     }
 
     /**
@@ -62,9 +63,11 @@ public class RenewBookUI extends javax.swing.JFrame {
         jLabel2.setText("BORROWER ID:");
 
         BRIDTB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BRIDTB.setName("BorrowerIDTextBox"); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("GET BOOKS");
+        jButton1.setName("GetBooksButton"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -81,9 +84,11 @@ public class RenewBookUI extends javax.swing.JFrame {
         jLabel3.setText("BOOK ID:");
 
         BIDTB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BIDTB.setName("BookIDTextBox"); // NOI18N
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setText("RENEW BOOK");
+        jButton2.setName("RenewBookButton"); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

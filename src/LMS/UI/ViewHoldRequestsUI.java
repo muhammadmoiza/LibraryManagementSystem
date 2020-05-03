@@ -21,6 +21,7 @@ public class ViewHoldRequestsUI extends javax.swing.JFrame {
         this.handler = handler;
         this.person = person;
         initComponents();
+        this.AL.setName("Error");
     }
 
     /**
@@ -53,9 +54,11 @@ public class ViewHoldRequestsUI extends javax.swing.JFrame {
         jLabel2.setText("BOOK ID:");
 
         BIDTB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BIDTB.setName("BookIDTextBox"); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("VIEW REQUESTS");
+        jButton1.setName("ViewRequestsButton"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

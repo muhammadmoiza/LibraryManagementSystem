@@ -25,6 +25,7 @@ public class AddBookUI extends javax.swing.JFrame {
         this.handler = handler;
         this.person = person;
         initComponents();
+        this.AL.setName("Error");
     }
 
     /**
@@ -49,9 +50,7 @@ public class AddBookUI extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1500, 1000));
         setMinimumSize(new java.awt.Dimension(1500, 1000));
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel1.setText("ADD BOOK");

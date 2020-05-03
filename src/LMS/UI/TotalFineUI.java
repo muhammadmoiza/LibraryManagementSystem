@@ -21,6 +21,7 @@ public class TotalFineUI extends javax.swing.JFrame {
         this.handler = handler;
         this.person = person;
         initComponents();
+        this.AL.setName("Error");
     }
 
     /**
@@ -59,9 +60,11 @@ public class TotalFineUI extends javax.swing.JFrame {
         BIDTL.setText("BORROWER'S ID:");
 
         BIDTB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BIDTB.setName("BorrowerIDTextBox"); // NOI18N
 
         CTFB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         CTFB.setText("COMPUTE TOTAL FINE");
+        CTFB.setName("ComputeTotalFineButton"); // NOI18N
         CTFB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 CTFBActionPerformed(evt);
@@ -81,6 +84,7 @@ public class TotalFineUI extends javax.swing.JFrame {
 
         PNB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         PNB.setText("PAID NOW");
+        PNB.setName("PaidNowButton"); // NOI18N
         PNB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PNBActionPerformed(evt);

@@ -24,6 +24,7 @@ public class ChangeBookInfoUI extends javax.swing.JFrame {
         this.handler = handler;
         this.person = person;
         initComponents();
+        this.AL.setName("Error");
     }
 
     /**

@@ -32,7 +32,7 @@ public class RemoveBookUIIT {
     public void setUp() throws InterruptedException {
         handler = new LMS.GUIHandler();
         LMS.UI.RemoveBookUI frame;
-        frame = runner.execute(() -> new LMS.UI.RemoveBookUI(handler));
+        frame = runner.execute(() -> new LMS.UI.RemoveBookUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
         Thread.sleep(1000);

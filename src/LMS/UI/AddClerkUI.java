@@ -25,6 +25,7 @@ public class AddClerkUI extends javax.swing.JFrame {
         this.handler = handler;
         this.isClerk = isClerk;
         initComponents();
+        this.AL.setName("Error");
     }
 
     /**

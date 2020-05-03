@@ -24,6 +24,7 @@ public class BorrowerInfoUI extends javax.swing.JFrame {
         this.handler = handler;
         this.person = person;
         initComponents();
+        this.AL.setName("Error");
     }
 
     /**
@@ -381,6 +382,7 @@ public class BorrowerInfoUI extends javax.swing.JFrame {
                         br.setName(NTB.getText());
                         br.setAddress(ATB.getText());
                         br.setPhone(PNTB.getText());
+                        System.out.println(PTB.getText()+":"+NTB.getText()+":"+ATB.getText()+":"+PNTB.getText());
                         try {
                             handler.lib.fillItBack(handler.con);
                             AL.setText("Profile updated");

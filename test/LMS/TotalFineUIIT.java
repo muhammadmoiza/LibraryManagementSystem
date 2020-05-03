@@ -29,37 +29,40 @@ public class TotalFineUIIT {
     }
     
     @Before
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         handler = new LMS.GUIHandler();
-        LMS.UI.MainUI frame;
-        frame = runner.execute(() -> new LMS.UI.MainUI(handler));
+        LMS.UI.TotalFineUI frame;
+        frame = runner.execute(() -> new LMS.UI.TotalFineUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
+        Thread.sleep(1000);
     }
     
     @Test
-    public void shouldCopyTextInLabelWhenClickingButton() throws InterruptedException {
-        window.radioButton("MainAdminLoginRadioButton").check();
-        window.textBox("LUITB").enterText("lib");
-        window.button("LoginButton").click();
+    public void ComputeTotalFine() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("ComputeTotalFineButton").click();
         
         Thread.sleep(1000);
-        /*
-        window.button("AdminAddClerkButton").click();
+        
+        assertEquals(true, true);
+    }
+    
+    @Test
+    public void PayNow() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("PaidNowButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(true, true);
+    }
+    
+    @Test
+    public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        window.button("AdminAddLibrarianButton").click();
-        window.button("BackButton").click();
-        
-        window.button("AdminIssueHistoryButton").click();
-        window.button("BackButton").click();
-        
-        window.button("AdminViewBooksButton").click();
-        window.button("BackButton").click();
-        
-        window.button("LogoutButton");
-        Thread.sleep(10000);
-        */
+        Thread.sleep(1000);
         
         assertEquals(true, true);
     }

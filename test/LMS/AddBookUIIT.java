@@ -46,9 +46,39 @@ public class AddBookUIIT {
         
         Thread.sleep(1000);
        
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text(), "Book added");
     }
     
+    @Test
+    public void AddBookTestCase2() throws InterruptedException {
+        window.textBox("BookAuthorTextBox").enterText("john doe");
+        window.textBox("BookSubjectTextBox").enterText("extras");
+        window.button("AddBookButton").click();
+        
+        Thread.sleep(1000);
+       
+        assertEquals(window.label("Error").text(), "Field(s) cannot be empty");
+    }
+    @Test
+    public void AddBookTestCase3() throws InterruptedException {
+        window.textBox("BookTitleTextBox").enterText("sample book title 1");
+        window.textBox("BookSubjectTextBox").enterText("extras");
+        window.button("AddBookButton").click();
+        
+        Thread.sleep(1000);
+       
+        assertEquals(window.label("Error").text(), "Field(s) cannot be empty");
+    }
+    @Test
+    public void AddBookTestCase4() throws InterruptedException {
+        window.textBox("BookTitleTextBox").enterText("sample book title 1");
+        window.textBox("BookAuthorTextBox").enterText("john doe");
+        window.button("AddBookButton").click();
+        
+        Thread.sleep(1000);
+       
+        assertEquals(window.label("Error").text(), "Field(s) cannot be empty");
+    }
     @Test
     public void GoBack() throws InterruptedException {
         window.button("BackButton").click();

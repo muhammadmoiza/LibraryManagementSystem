@@ -29,37 +29,44 @@ public class ReturnBookUIIT {
     }
     
     @Before
-    public void setUp() {
+    public void setUp() throws InterruptedException {
         handler = new LMS.GUIHandler();
-        LMS.UI.MainUI frame;
-        frame = runner.execute(() -> new LMS.UI.MainUI(handler));
+        LMS.UI.ReturnBookUI frame;
+        frame = runner.execute(() -> new LMS.UI.ReturnBookUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
+        Thread.sleep(1000);
     }
     
     @Test
-    public void shouldCopyTextInLabelWhenClickingButton() throws InterruptedException {
-        window.radioButton("MainAdminLoginRadioButton").check();
-        window.textBox("LUITB").enterText("lib");
-        window.button("LoginButton").click();
+    public void GetBooks() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("GetBooksButton").click();
         
         Thread.sleep(1000);
-        /*
-        window.button("AdminAddClerkButton").click();
+        
+        assertEquals(true, true);
+    }
+    
+    @Test
+    public void ReturnBookIssue() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("GetBooksButton").click();
+        
+        Thread.sleep(1000);
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("ReturnBookButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(true, true);
+    }
+    
+    @Test
+    public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        window.button("AdminAddLibrarianButton").click();
-        window.button("BackButton").click();
-        
-        window.button("AdminIssueHistoryButton").click();
-        window.button("BackButton").click();
-        
-        window.button("AdminViewBooksButton").click();
-        window.button("BackButton").click();
-        
-        window.button("LogoutButton");
-        Thread.sleep(10000);
-        */
+        Thread.sleep(1000);
         
         assertEquals(true, true);
     }

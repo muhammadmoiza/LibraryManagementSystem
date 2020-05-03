@@ -20,6 +20,7 @@ public class MainUI extends javax.swing.JFrame {
     public MainUI(GUIHandler handler) {
         this.handler = handler;
         initComponents();
+        this.AL.setName("Error");
     }
 
     public MainUI() {

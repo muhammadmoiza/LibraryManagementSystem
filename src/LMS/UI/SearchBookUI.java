@@ -24,6 +24,7 @@ public class SearchBookUI extends javax.swing.JFrame {
         this.handler = handler;
         this.person = person;
         initComponents();
+        this.AL.setName("Error");
     }
 
     private SearchBookUI() {
@@ -69,9 +70,11 @@ public class SearchBookUI extends javax.swing.JFrame {
         TL.setText("BOOK TITLE:");
 
         BNTB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        BNTB.setName("SearchFilterTextBox"); // NOI18N
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("SEARCH");
+        jButton1.setName("SearchButton"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -86,6 +89,7 @@ public class SearchBookUI extends javax.swing.JFrame {
 
         TRB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         TRB.setText(" BY TITLE");
+        TRB.setName("TitleRadioButton"); // NOI18N
         TRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TRBActionPerformed(evt);
@@ -94,6 +98,7 @@ public class SearchBookUI extends javax.swing.JFrame {
 
         ARB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         ARB.setText(" BY AUTHOR");
+        ARB.setName("AuthorRadioButton"); // NOI18N
         ARB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ARBActionPerformed(evt);
@@ -102,6 +107,7 @@ public class SearchBookUI extends javax.swing.JFrame {
 
         SRB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         SRB.setText(" BY SUBJECT");
+        SRB.setName("SubjectRadioButton"); // NOI18N
         SRB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SRBActionPerformed(evt);

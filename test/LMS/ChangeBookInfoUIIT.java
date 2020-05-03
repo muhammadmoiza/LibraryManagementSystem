@@ -39,17 +39,37 @@ public class ChangeBookInfoUIIT {
     }
     
     @Test
-    public void GetBook() throws InterruptedException {
+    public void GetBookTestCase1() throws InterruptedException {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text(), "");
     }
     
     @Test
-    public void UpdateBookTitle() throws InterruptedException {
+    public void GetBookTestCase2() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("20000");
+        window.button("GetBookButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Invalid borrower id"), true);
+    }
+    
+    @Test
+    public void GetBookTestCase3() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("2A3B#");
+        window.button("GetBookButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void UpdateBookTitleTestCase1() throws InterruptedException {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
@@ -60,25 +80,54 @@ public class ChangeBookInfoUIIT {
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text().contains("Updated"), true);
     }
     
     @Test
-    public void UpdateBookAuthor() throws InterruptedException {
+    public void UpdateBookTitleTestCase2() throws InterruptedException {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
         Thread.sleep(1000);
-        window.textBox("BookAuthorTextBox").deleteText().enterText("New Author");
+        
+        window.textBox("BookTitleTextBox").deleteText();
         window.button("UpdateButton").click();
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
     
     @Test
-    public void UpdateBookSubject() throws InterruptedException {
+    public void UpdateBookAuthorTestCase1() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+        Thread.sleep(1000);
+        window.textBox("BookAuthorTextBox").deleteText().setText("Sample Author");
+        window.button("UpdateButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Updated"), true);
+    }
+    
+    @Test
+    public void UpdateBookAuthorTestCase2() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+        Thread.sleep(1000);
+        window.textBox("BookAuthorTextBox").deleteText();
+        window.button("UpdateButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void UpdateBookSubjectTestCase1() throws InterruptedException {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
@@ -88,11 +137,25 @@ public class ChangeBookInfoUIIT {
         
         Thread.sleep(1000);
         
-        assertEquals(true, true);
+        assertEquals(window.label("Error").text().contains("Updated"), true);
     }
     
     @Test
-    public void Back() throws InterruptedException {
+    public void UpdateBookSubjectTestCase2() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+        Thread.sleep(1000);
+        window.textBox("BookSubjectTextBox").deleteText();
+        window.button("UpdateButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
         Thread.sleep(1000);

@@ -39,7 +39,7 @@ public class AddBorrowerUIIT {
     }
     
     @Test
-    public void shouldCopyTextInLabelWhenClickingButton() throws InterruptedException {
+    public void AddBorrowerTestCase1() throws InterruptedException {
         
         window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
         window.textBox("BorrowerAddressTextBox").enterText("City Paris");
@@ -48,24 +48,89 @@ public class AddBorrowerUIIT {
         window.button("AddBorrowerButton").click();
         
         Thread.sleep(1000);
-        /*
-        window.button("AdminAddClerkButton").click();
-        window.button("BackButton").click();
         
-        window.button("AdminAddLibrarianButton").click();
-        window.button("BackButton").click();
+        assertEquals(window.label("Error").text().contains("created successfully."), true);
+    }
+    
+//------------------------ For Not Allowed Values
+    @Test
+    public void AddBorrowerTestCase2() throws InterruptedException {
         
-        window.button("AdminIssueHistoryButton").click();
-        window.button("BackButton").click();
+        window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
+        window.textBox("BorrowerAddressTextBox").enterText("City Paris");
+        window.textBox("BorrowerPhoneTextBox").enterText("48394");
+        window.textBox("BorrowerSalaryTextBox").enterText("Bogus10000");
+        window.button("AddBorrowerButton").click();
         
-        window.button("AdminViewBooksButton").click();
-        window.button("BackButton").click();
+        Thread.sleep(1000);
         
-        window.button("LogoutButton");
-        Thread.sleep(10000);
-        */
+        assertEquals(window.label("Error").text().contains("Phone number and salary can only be numbers"), true);
+    }
+    
+    @Test
+    public void AddBorrowerTestCase3() throws InterruptedException {
         
-        assertEquals(true, true);
+        window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
+        window.textBox("BorrowerAddressTextBox").enterText("City Paris");
+        window.textBox("BorrowerPhoneTextBox").enterText("Bogus48394");
+        window.textBox("BorrowerSalaryTextBox").enterText("10000");
+        window.button("AddBorrowerButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Phone number and salary can only be numbers"), true);
+    }
+//------------------------ For NULL Values
+    @Test
+    public void AddBorrowerTestCase4() throws InterruptedException {
+        
+        window.textBox("BorrowerAddressTextBox").enterText("City Paris");
+        window.textBox("BorrowerPhoneTextBox").enterText("48394");
+        window.textBox("BorrowerSalaryTextBox").enterText("10000");
+        window.button("AddBorrowerButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void AddBorrowerTestCase5() throws InterruptedException {
+        
+        window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
+        window.textBox("BorrowerPhoneTextBox").enterText("48394");
+        window.textBox("BorrowerSalaryTextBox").enterText("10000");
+        window.button("AddBorrowerButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void AddBorrowerTestCase6() throws InterruptedException {
+        
+        window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
+        window.textBox("BorrowerAddressTextBox").enterText("City Paris");
+        window.textBox("BorrowerSalaryTextBox").enterText("10000");
+        window.button("AddBorrowerButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void AddBorrowerTestCase7() throws InterruptedException {
+        
+        window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
+        window.textBox("BorrowerAddressTextBox").enterText("City Paris");
+        window.textBox("BorrowerPhoneTextBox").enterText("48394");
+        window.button("AddBorrowerButton").click();
+        
+        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
     
     @After
