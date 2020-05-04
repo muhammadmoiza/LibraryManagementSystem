@@ -1,5 +1,5 @@
 # LibraryManagementSystem
-A full fledge Library Management System application covers all the key components of a library, developed in java backend and java swing frontend along with black box testing components in assertj swing.
+A full fledge Library Management System application covering all the key components of a library, developed in java backend and java swing frontend along with black box testing components in assertj swing.
 
 ![alt Sample Librarian Home UI](https://github.com/muhammadmoiza/LibraryManagementSystem/blob/master/LibrarianUISample.png?raw=true)
 
