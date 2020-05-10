@@ -40,9 +40,9 @@ public class ShowBooksUIIT {
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.button("BackButton").click();
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -54,9 +54,9 @@ public class ShowBooksUIIT {
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.button("BackButton").click();
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }

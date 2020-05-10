@@ -193,14 +193,19 @@ public class AddBorrowerUI extends javax.swing.JFrame {
         AL.setText("");
         
         if(!NTB.getText().equals("") && !ATB.getText().equals("") && !PNTB.getText().equals("") && !STB.getText().equals("")){
-            if(!PNTB.getText().matches(".*[a-zA-Z]+.*") && !STB.getText().matches(".*[a-zA-Z]+.*")){
-                String string = handler.lib.createPerson('b', NTB.getText(), ATB.getText(), PNTB.getText(), Integer.parseInt(STB.getText()));
-                try {
-                    handler.lib.fillItBack(handler.con);
-                } catch (SQLException ex) {
-                    Logger.getLogger(AddBorrowerUI.class.getName()).log(Level.SEVERE, null, ex);
+            if(PNTB.getText().matches("[0-9]+") && STB.getText().matches("[0-9]+")){
+                if(NTB.getText().length() <= 40 && ATB.getText().length() <= 30 && PNTB.getText().length() <= 30 && STB.getText().length() <= 10){
+                    String string = handler.lib.createPerson('b', NTB.getText(), ATB.getText(), PNTB.getText(), Integer.parseInt(STB.getText()));
+                    try {
+                        handler.lib.fillItBack(handler.con);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(AddBorrowerUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    AL.setText(string);
                 }
-                AL.setText(string);
+                else{
+                    AL.setText("Word limit of field(s) exceeded");
+                }
             }
             else{
                 AL.setText("Phone number and salary can only be numbers");

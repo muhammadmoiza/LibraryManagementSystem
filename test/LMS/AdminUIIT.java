@@ -35,7 +35,7 @@ public class AdminUIIT {
         frame = runner.execute(() -> new LMS.UI.AdminUI(handler));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
     }
     
     @Test
@@ -43,7 +43,7 @@ public class AdminUIIT {
 
         window.button("AdminAddClerkButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -53,7 +53,7 @@ public class AdminUIIT {
 
         window.button("AdminAddLibrarianButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }    
@@ -63,7 +63,7 @@ public class AdminUIIT {
 
         window.button("AdminIssueHistoryButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }    
@@ -73,7 +73,7 @@ public class AdminUIIT {
 
         window.button("AdminViewBooksButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }    
@@ -83,7 +83,7 @@ public class AdminUIIT {
 
         window.button("LogoutButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }

@@ -35,7 +35,7 @@ public class RenewBookUIIT {
         frame = runner.execute(() -> new LMS.UI.RenewBookUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
@@ -43,7 +43,7 @@ public class RenewBookUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("GetBooksButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text(), "");
     }
@@ -53,7 +53,7 @@ public class RenewBookUIIT {
         window.textBox("BorrowerIDTextBox").enterText("10101");
         window.button("GetBooksButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Invalid borrower id"), true);
     }
@@ -63,7 +63,7 @@ public class RenewBookUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100a");
         window.button("GetBooksButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
@@ -72,9 +72,19 @@ public class RenewBookUIIT {
     public void GetBooksTestCase4() throws InterruptedException {
         window.button("GetBooksButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void GetBooksTestCase5() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("1457249578439875247900");
+        window.button("GetBooksButton").click();
+        
+//Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
@@ -82,11 +92,11 @@ public class RenewBookUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("GetBooksButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("200");
         window.button("RenewBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(window.label("Error1").text().contains("Book issue renewed"), true);
     }
     
@@ -95,11 +105,11 @@ public class RenewBookUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("GetBooksButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("20202");
         window.button("RenewBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Invalid borrower id or book id"), true);
     }
@@ -109,11 +119,11 @@ public class RenewBookUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("GetBooksButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("2ao0oa0");
         window.button("RenewBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
     
@@ -122,18 +132,31 @@ public class RenewBookUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("GetBooksButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.button("RenewBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void RenewBookIssueTestCase5() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("100");
+        window.button("GetBooksButton").click();
+        
+//Thread.sleep(1000);
+        window.textBox("BookIDTextBox").enterText("22584375847543852347700");
+        window.button("RenewBookButton").click();
+        
+//Thread.sleep(1000);
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
     public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }

@@ -35,7 +35,7 @@ public final class AddBorrowerUIIT {
         frame = runner.execute(() -> new LMS.UI.AddBorrowerUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
     }
     
     @Test
@@ -47,7 +47,7 @@ public final class AddBorrowerUIIT {
         window.textBox("BorrowerSalaryTextBox").enterText("10000");
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("created successfully."), true);
     }
@@ -62,7 +62,7 @@ public final class AddBorrowerUIIT {
         window.textBox("BorrowerSalaryTextBox").enterText("Bogus10000");
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Phone number and salary can only be numbers"), true);
     }
@@ -76,7 +76,7 @@ public final class AddBorrowerUIIT {
         window.textBox("BorrowerSalaryTextBox").enterText("10000");
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Phone number and salary can only be numbers"), true);
     }
@@ -89,7 +89,7 @@ public final class AddBorrowerUIIT {
         window.textBox("BorrowerSalaryTextBox").enterText("10000");
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
@@ -102,7 +102,7 @@ public final class AddBorrowerUIIT {
         window.textBox("BorrowerSalaryTextBox").enterText("10000");
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
@@ -115,7 +115,7 @@ public final class AddBorrowerUIIT {
         window.textBox("BorrowerSalaryTextBox").enterText("10000");
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
@@ -128,9 +128,65 @@ public final class AddBorrowerUIIT {
         window.textBox("BorrowerPhoneTextBox").enterText("48394");
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void AddBorrowerTestCase8() throws InterruptedException {
+        
+        window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
+        window.textBox("BorrowerAddressTextBox").enterText("Cikfdsjafjlksdfjlkasdjklfjsdlkjflksdajflkjsdlkfjlksfdjfksdfkljkldsflkdslkty Paris");
+        window.textBox("BorrowerPhoneTextBox").enterText("48394");
+        window.textBox("BorrowerSalaryTextBox").enterText("10000");
+        window.button("AddBorrowerButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
+    }
+    
+    @Test
+    public void AddBorrowerTestCase9() throws InterruptedException {
+        
+        window.textBox("BorrowerNameTextBox").enterText("Sample Boradsfjsdlkfjsdkfjkladjslkfksdjfkjsdlkfjlksdjfkdfdsfsdfdsafsdrower 1");
+        window.textBox("BorrowerAddressTextBox").enterText("City Paris");
+        window.textBox("BorrowerPhoneTextBox").enterText("48394");
+        window.textBox("BorrowerSalaryTextBox").enterText("10000");
+        window.button("AddBorrowerButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
+    }
+    
+    @Test
+    public void AddBorrowerTestCase10() throws InterruptedException {
+        
+        window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
+        window.textBox("BorrowerAddressTextBox").enterText("City Paris");
+        window.textBox("BorrowerPhoneTextBox").enterText("48794378578438489743874874379345738475389459439543857834875384394");
+        window.textBox("BorrowerSalaryTextBox").enterText("10000");
+        window.button("AddBorrowerButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
+    }
+    
+    @Test
+    public void AddBorrowerTestCase11() throws InterruptedException {
+        
+        window.textBox("BorrowerNameTextBox").enterText("Sample Borrower 1");
+        window.textBox("BorrowerAddressTextBox").enterText("City Paris");
+        window.textBox("BorrowerPhoneTextBox").enterText("48394");
+        window.textBox("BorrowerSalaryTextBox").enterText("100089432854835371895782787350");
+        window.button("AddBorrowerButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @After

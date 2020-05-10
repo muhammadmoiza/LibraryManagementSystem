@@ -163,22 +163,27 @@ public class IssueBookUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         AL.setText("");
         if(!BIDTB.getText().equals("") && !BRIDTB.getText().equals("")){
-            if(!BIDTB.getText().matches(".*[a-zA-Z]+.*") && !BIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
-                Borrower br = handler.lib.findBorrower(Integer.parseInt(BRIDTB.getText()));
-                if(b != null && br != null)
-                {
-                    String string = b.issueBook(br, (Staff)person);
-                    try {
-                        handler.lib.fillItBack(handler.con);
-                    } catch (SQLException ex) {
-                        Logger.getLogger(IssueBookUI.class.getName()).log(Level.SEVERE, null, ex);
+            if(BIDTB.getText().matches("[0-9]+") && BIDTB.getText().matches("[0-9]+")){
+                if(BIDTB.getText().length() <= 10 && BIDTB.getText().length() <= 10){
+                    Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
+                    Borrower br = handler.lib.findBorrower(Integer.parseInt(BRIDTB.getText()));
+                    if(b != null && br != null)
+                    {
+                        String string = b.issueBook(br, (Staff)person);
+                        try {
+                            handler.lib.fillItBack(handler.con);
+                        } catch (SQLException ex) {
+                            Logger.getLogger(IssueBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        AL.setText(string);
                     }
-                    AL.setText(string);
+                    else
+                    {
+                        AL.setText("Invalid borrower or book id");
+                    }
                 }
-                else
-                {
-                    AL.setText("Invalid borrower or book id");
+                else{
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{

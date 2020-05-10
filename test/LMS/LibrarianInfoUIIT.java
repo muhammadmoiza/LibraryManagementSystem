@@ -35,7 +35,7 @@ public class LibrarianInfoUIIT {
         frame = runner.execute(() -> new LMS.UI.LibrarianInfoUI(handler,  new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
@@ -43,7 +43,7 @@ public class LibrarianInfoUIIT {
     
         window.button("BackButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }

@@ -35,7 +35,7 @@ public class ClerkInfoUIIT {
         frame = runner.execute(() -> new LMS.UI.ClerkInfoUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
@@ -43,7 +43,7 @@ public class ClerkInfoUIIT {
         window.textBox("ClerkIDTextBox").enterText("2");
         window.button("ViewInfoButton").click();
         
-        Thread.sleep(1000);        
+//Thread.sleep(1000);        
         assertEquals(window.label("Error").text(), "");
     }
     
@@ -52,7 +52,7 @@ public class ClerkInfoUIIT {
         window.textBox("ClerkIDTextBox").enterText("2000");
         window.button("ViewInfoButton").click();
         
-        Thread.sleep(1000);        
+//Thread.sleep(1000);        
         assertEquals(window.label("Error").text().contains("Invalid clerk id"), true);
     }
     
@@ -61,15 +61,24 @@ public class ClerkInfoUIIT {
         window.textBox("ClerkIDTextBox").enterText("E2&");
         window.button("ViewInfoButton").click();
         
-        Thread.sleep(1000);        
+//Thread.sleep(1000);        
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void ShowClerkInfoTestCase4() throws InterruptedException {
+        window.textBox("ClerkIDTextBox").enterText("248548358243543895874");
+        window.button("ViewInfoButton").click();
+        
+//Thread.sleep(1000);        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), "");
     }
     
     @Test
     public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        Thread.sleep(1000);        
+//Thread.sleep(1000);        
         assertEquals(true, true);
     }
     

@@ -35,7 +35,7 @@ public class ChangeBookInfoUIIT {
         frame = runner.execute(() -> new LMS.UI.ChangeBookInfoUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
     }
     
     @Test
@@ -43,7 +43,7 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text(), "");
     }
@@ -53,7 +53,7 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("20000");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Invalid borrower id"), true);
     }
@@ -63,9 +63,28 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("2A3B#");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
+    }
+    
+    @Test
+    public void GetBookTestCase4() throws InterruptedException {
+        window.button("GetBookButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void GetBookTestCase5() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("203485435984358435824380");
+        window.button("GetBookButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
@@ -73,12 +92,12 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         window.textBox("BookTitleTextBox").deleteText().enterText("New Book Title");
         window.button("UpdateButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Updated"), true);
     }
@@ -88,14 +107,44 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         window.textBox("BookTitleTextBox").deleteText();
         window.button("UpdateButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void UpdateBookTitleTestCase3() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+//        Thread.sleep(1000);
+        
+        window.textBox("BookTitleTextBox").deleteText().enterText("New kfalk203485435984358435824380fjdsfksdjfsdkfdfsdafsdfsdfsdkljjjkkfdsfsdaBook Title");
+        window.button("UpdateButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
+    }
+    
+    @Test
+    public void UpdateBookTitleTestCase4() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+//        Thread.sleep(1000);
+        
+        window.textBox("BookTitleTextBox").deleteText().enterText("New fjsdfsdjfkjsdlf203485435984358435824380sdlkflksdjflksdjflkjsdlkfjsdlkjflksdjflksjflkjsflkjfdlksdjlkfjldksjflkdfBook Title");
+        window.button("UpdateButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
@@ -103,11 +152,11 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         window.textBox("BookAuthorTextBox").deleteText().setText("Sample Author");
         window.button("UpdateButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Updated"), true);
     }
@@ -117,13 +166,41 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         window.textBox("BookAuthorTextBox").deleteText();
         window.button("UpdateButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void UpdateBookAuthorTestCase3() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+//        Thread.sleep(1000);
+        window.textBox("BookAuthorTextBox").deleteText().setText("Samplfjdsklgjskdjgklf203485435984358435824380djkgljfdkgjkdfjgkfdjgkjdfgjkfle dsfkdlakfldfklsdlkfjlksdjflksdjfkljsdklfjsdfkdsdsfasdfsdafsdfsdfadsfsfsddfsdfadsAuthor");
+        window.button("UpdateButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
+    }
+    
+    @Test
+    public void UpdateBookAuthorTestCase4() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+//        Thread.sleep(1000);
+        window.textBox("BookAuthorTextBox").deleteText().setText("Ssdkjfsadjklfjsdlkfjdslk203485435984358435824380fjlksdjflksdjflsdajfljaslfjsadlfjlsdakfjlksdjflksdjflksadjflksdjflkdjflkjlsfdkample Author");
+        window.button("UpdateButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
@@ -131,11 +208,11 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         window.textBox("BookSubjectTextBox").deleteText().enterText("New Nice Subject");
         window.button("UpdateButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Updated"), true);
     }
@@ -145,20 +222,48 @@ public class ChangeBookInfoUIIT {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("GetBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         window.textBox("BookSubjectTextBox").deleteText();
         window.button("UpdateButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void UpdateBookSubjectTestCase3() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+//        Thread.sleep(1000);
+        window.textBox("BookSubjectTextBox").deleteText().enterText("dskfjdksjflkdsalk203485435984358435824380fjsdlkfjlksdajflksdjfklsdajflksdjlfkjsdalkfjsdlfalksdfjlkdsNew Nice Subject");
+        window.button("UpdateButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
+    }
+    
+    @Test
+    public void UpdateBookSubjectTestCase4() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("200");
+        window.button("GetBookButton").click();
+        
+//        Thread.sleep(1000);
+        window.textBox("BookSubjectTextBox").deleteText().enterText("Newfdsfsdfjlsdafjlksdjflksjflksjflkdjflkjdalkfjldksjflksjdfkljsdlkfjdsklfjld Nice Subject");
+        window.button("UpdateButton").click();
+        
+//        Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
     public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }

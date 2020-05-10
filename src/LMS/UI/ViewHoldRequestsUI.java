@@ -152,13 +152,19 @@ public class ViewHoldRequestsUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         AL.setText("");
         if(!BIDTB.getText().equals("")){
-                if(!BIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                    Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
-                    if(b != null){
-                        TA.setText(b.printHoldRequests());
+                if(BIDTB.getText().matches("[0-9]+")){
+                    if(BIDTB.getText().length() <= 10){
+                        Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
+                        if(b != null){
+                            TA.setText(b.printHoldRequests());
+                        }
+                        else{
+                            AL.setText("Invalid book id");
+                        }
                     }
-                    else{
-                        AL.setText("Invalid book id");
+                    else
+                    {
+                        AL.setText("Word limit of field(s) exceeded");
                     }
                 }
                 else{

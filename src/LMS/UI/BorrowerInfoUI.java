@@ -328,29 +328,34 @@ public class BorrowerInfoUI extends javax.swing.JFrame {
         AL.setText("");
         if(person.getClass().getSimpleName().equals("Clerk") || person.getClass().getSimpleName().equals("Librarian")){
             if(!SBRIDTB.getText().equals("")){
-                if(!SBRIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                    Borrower br = handler.lib.findBorrower(Integer.parseInt(SBRIDTB.getText()));
-                    if(br != null){
-                        IDTB.setText(Integer.toString(br.getID()));
-                        PTB.setText(br.getPassword());
-                        NTB.setText(br.getName());
-                        ATB.setText(br.getAddress());
-                        PNTB.setText(br.getPhoneNumber());
-                        String string = "";
-                        if(br.getBorrowedBooks() != null){
-                            string += "\n--------------------------------------------------------------------------------------------------------------\n";
-                            string += "\nBook ID\t\tTitle\t\tAuthor\t\tSubject\n";
-                            string += "\n--------------------------------------------------------------------------------------------------------------\n";
-                            for(int i = 0;i < br.getBorrowedBooks().size();i++){
-                                string += br.getBorrowedBooks().get(i).getBook().toString();
+                if(SBRIDTB.getText().matches("[0-9]+")){
+                    if(SBRIDTB.getText().length() <= 10){
+                        Borrower br = handler.lib.findBorrower(Integer.parseInt(SBRIDTB.getText()));
+                        if(br != null){
+                            IDTB.setText(Integer.toString(br.getID()));
+                            PTB.setText(br.getPassword());
+                            NTB.setText(br.getName());
+                            ATB.setText(br.getAddress());
+                            PNTB.setText(br.getPhoneNumber());
+                            String string = "";
+                            if(br.getBorrowedBooks() != null){
+                                string += "\n--------------------------------------------------------------------------------------------------------------\n";
+                                string += "\nBook ID\t\tTitle\t\tAuthor\t\tSubject\n";
+                                string += "\n--------------------------------------------------------------------------------------------------------------\n";
+                                for(int i = 0;i < br.getBorrowedBooks().size();i++){
+                                    string += br.getBorrowedBooks().get(i).getBook().toString();
+                                }
+                            }else{
+                                string += "No book currently borrowed";
                             }
-                        }else{
-                            string += "No book currently borrowed";
+                            TA.setText(string);
                         }
-                        TA.setText(string);
+                        else{
+                            AL.setText("Invalid borrower id");
+                        }
                     }
                     else{
-                        AL.setText("Invalid borrower id");
+                        AL.setText("Word limit of field(s) exceeded");
                     }
                 }
                 else{
@@ -375,24 +380,29 @@ public class BorrowerInfoUI extends javax.swing.JFrame {
         AL2.setText("");
         if(person.getClass().getSimpleName().equals("Clerk") || person.getClass().getSimpleName().equals("Librarian")){
             if(!SBRIDTB.getText().equals("") && !PTB.getText().equals("") && !NTB.getText().equals("") && !ATB.getText().equals("") && !PNTB.getText().equals("")){
-                if(!SBRIDTB.getText().matches(".*[a-zA-Z]+.*") && !PNTB.getText().matches(".*[a-zA-Z]+.*")){
-                    Borrower br = handler.lib.findBorrower(Integer.parseInt(SBRIDTB.getText()));
-                    if(br != null){
-                        br.setPassword(PTB.getText());
-                        br.setName(NTB.getText());
-                        br.setAddress(ATB.getText());
-                        br.setPhone(PNTB.getText());
-                        System.out.println(PTB.getText()+":"+NTB.getText()+":"+ATB.getText()+":"+PNTB.getText());
-                        try {
-                            handler.lib.fillItBack(handler.con);
-                            AL.setText("Profile updated");
-                        } catch (SQLException ex) {
-                            Logger.getLogger(BorrowerInfoUI.class.getName()).log(Level.SEVERE, null, ex);
-                            AL.setText("Could not update due to technical issue");
+                if(SBRIDTB.getText().matches("[0-9]+") && PNTB.getText().matches("[0-9]+")){
+                    if(PTB.getText().length() <= 30 && NTB.getText().length() <= 40 && ATB.getText().length() <= 60 && PNTB.getText().length() <= 30){
+                        Borrower br = handler.lib.findBorrower(Integer.parseInt(SBRIDTB.getText()));
+                        if(br != null){
+                            br.setPassword(PTB.getText());
+                            br.setName(NTB.getText());
+                            br.setAddress(ATB.getText());
+                            br.setPhone(PNTB.getText());
+                            System.out.println(PTB.getText()+":"+NTB.getText()+":"+ATB.getText()+":"+PNTB.getText());
+                            try {
+                                handler.lib.fillItBack(handler.con);
+                                AL.setText("Profile updated");
+                            } catch (SQLException ex) {
+                                Logger.getLogger(BorrowerInfoUI.class.getName()).log(Level.SEVERE, null, ex);
+                                AL.setText("Could not update due to technical issue");
+                            }
+                        }
+                        else{
+                            AL.setText("Invalid borrower id");
                         }
                     }
                     else{
-                        AL.setText("Invalid borrower id");
+                        AL.setText("Word limit of field(s) exceeded");
                     }
                 }
                 else{

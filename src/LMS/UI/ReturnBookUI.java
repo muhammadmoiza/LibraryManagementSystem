@@ -198,24 +198,30 @@ public class ReturnBookUI extends javax.swing.JFrame {
         AL.setText("");
         AL2.setText("");
         if(!BRIDTB.getText().equals("")){
-            if(!BRIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                Borrower br = handler.lib.findBorrower(Integer.parseInt(BRIDTB.getText()));
-                if(br != null){
-                    String string = "";
-                    if(br.getBorrowedBooks() != null){
-                        string += "\n--------------------------------------------------------------------------------------------------------------\n";
-                        string += "\nBook ID\t\tTitle\t\tAuthor\t\tSubject\n";
-                        string += "\n--------------------------------------------------------------------------------------------------------------\n";
-                        for(int i = 0;i < br.getBorrowedBooks().size();i++){
-                            string += br.getBorrowedBooks().get(i).getBook().toString();
+            if(BRIDTB.getText().matches("[0-9]+")){
+                if(BRIDTB.getText().length() <= 10){
+                    Borrower br = handler.lib.findBorrower(Integer.parseInt(BRIDTB.getText()));
+                    if(br != null){
+                        String string = "";
+                        if(br.getBorrowedBooks() != null){
+                            string += "\n--------------------------------------------------------------------------------------------------------------\n";
+                            string += "\nBook ID\t\tTitle\t\tAuthor\t\tSubject\n";
+                            string += "\n--------------------------------------------------------------------------------------------------------------\n";
+                            for(int i = 0;i < br.getBorrowedBooks().size();i++){
+                                string += br.getBorrowedBooks().get(i).getBook().toString();
+                            }
+                        }else{
+                            string += "No book currently borrowed";
                         }
-                    }else{
-                        string += "No book currently borrowed";
+                        TA.setText(string);
                     }
-                    TA.setText(string);
+                    else{
+                        AL.setText("Invalid borrower id");
+                    }
                 }
-                else{
-                    AL.setText("Invalid borrower id");
+                else
+                {
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{
@@ -232,32 +238,37 @@ public class ReturnBookUI extends javax.swing.JFrame {
         AL2.setText("");
         
         if(!BRIDTB.getText().equals("") && !BIDTB.getText().equals("")){
-            if(!BRIDTB.getText().matches(".*[a-zA-Z]+.*") && !BIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                Borrower br = handler.lib.findBorrower(Integer.parseInt(BRIDTB.getText()));
-                Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
-                Loan loan = null;
-                if(br != null && b != null){
-                    ArrayList<Loan> loans = br.getBorrowedBooks();
-                    for(Loan iterator:loans){
-                        if(iterator.getBook().equals(b) &&iterator.getBorrower().equals(br)){
-                            loan = iterator;
+            if(BRIDTB.getText().matches("[0-9]+") && BIDTB.getText().matches("[0-9]+")){
+                if(BRIDTB.getText().length() <= 10 && BIDTB.getText().length() <= 10){
+                    Borrower br = handler.lib.findBorrower(Integer.parseInt(BRIDTB.getText()));
+                    Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
+                    Loan loan = null;
+                    if(br != null && b != null){
+                        ArrayList<Loan> loans = br.getBorrowedBooks();
+                        for(Loan iterator:loans){
+                            if(iterator.getBook().equals(b) &&iterator.getBorrower().equals(br)){
+                                loan = iterator;
+                            }
                         }
-                    }
-                    if(loan != null){
-                        b.returnBook(br, loan, ((Staff)person));
-                        try {
-                            handler.lib.fillItBack(handler.con);
-                        } catch (SQLException ex) {
-                            Logger.getLogger(ReturnBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                        if(loan != null){
+                            b.returnBook(br, loan, ((Staff)person));
+                            try {
+                                handler.lib.fillItBack(handler.con);
+                            } catch (SQLException ex) {
+                                Logger.getLogger(ReturnBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                            AL2.setText("Book returned");
                         }
-                        AL2.setText("Book returned");
+                        else{
+                            AL2.setText("No loan found meeting these credentials");
+                        }
                     }
                     else{
-                        AL2.setText("No loan found meeting these credentials");
+                        AL.setText("Invalid borrower id or book id");
                     }
                 }
                 else{
-                    AL.setText("Invalid borrower id or book id");
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{

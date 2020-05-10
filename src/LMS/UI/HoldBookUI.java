@@ -183,20 +183,25 @@ public class HoldBookUI extends javax.swing.JFrame {
             BRIDTL.setVisible(true);
             BRIDTB.setVisible(true);
             if(!BIDTB.getText().equals("") && !BRIDTB.getText().equals("")){
-                if(!BIDTB.getText().matches(".*[a-zA-Z]+.*") && !BRIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                    Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
-                    Borrower br = handler.lib.findBorrower(Integer.parseInt(BRIDTB.getText()));
-                    if(b != null && br != null){
-                        String string = b.makeHoldRequest(br);
-                        try {
-                            handler.lib.fillItBack(handler.con);
-                        } catch (SQLException ex) {
-                            Logger.getLogger(HoldBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                if(BIDTB.getText().matches("[0-9]+") && BRIDTB.getText().matches("[0-9]+")){
+                    if(BIDTB.getText().length() <= 10 && BRIDTB.getText().length() <= 10){
+                        Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
+                        Borrower br = handler.lib.findBorrower(Integer.parseInt(BRIDTB.getText()));
+                        if(b != null && br != null){
+                            String string = b.makeHoldRequest(br);
+                            try {
+                                handler.lib.fillItBack(handler.con);
+                            } catch (SQLException ex) {
+                                Logger.getLogger(HoldBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                            AL.setText(string);
                         }
-                        AL.setText(string);
+                        else{
+                                AL.setText("Invalid book id or borrower id");
+                        }
                     }
                     else{
-                            AL.setText("Invalid book id or borrower id");
+                        AL.setText("Word limit of field(s) exceeded");
                     }
                 }
                 else{
@@ -211,7 +216,7 @@ public class HoldBookUI extends javax.swing.JFrame {
             BRIDTL.setVisible(false);
             BRIDTB.setVisible(false);  
             if(!BIDTB.getText().equals("")){
-                if(!BIDTB.getText().matches(".*[a-zA-Z]+.*")){
+                if(BIDTB.getText().matches("[0-9]+")){
                     String string = "";
                     Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
                     if(b != null){

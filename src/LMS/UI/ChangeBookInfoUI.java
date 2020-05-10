@@ -80,6 +80,11 @@ public class ChangeBookInfoUI extends javax.swing.JFrame {
 
         STB.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         STB.setName("BookSubjectTextBox"); // NOI18N
+        STB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                STBActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("UPDATE");
@@ -230,21 +235,26 @@ public class ChangeBookInfoUI extends javax.swing.JFrame {
         AL.setText("");
         AL2.setText("");
         if(!BIDTB.getText().equals("") && !TTB.getText().equals("") && !ATB.getText().equals("") && !STB.getText().equals("")){
-            if(!BIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
-                if(b != null){
-                    b.setTitle(TTB.getText());
-                    b.setAuthor(ATB.getText());
-                    b.setSubject(STB.getText());
-                    try {
-                        handler.lib.fillItBack(handler.con);
-                    } catch (SQLException ex) {
-                        Logger.getLogger(ChangeBookInfoUI.class.getName()).log(Level.SEVERE, null, ex);
+            if(BIDTB.getText().matches("[0-9]+")){
+                if(BIDTB.getText().length() <= 10){
+                    Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
+                    if(b != null){
+                        b.setTitle(TTB.getText());
+                        b.setAuthor(ATB.getText());
+                        b.setSubject(STB.getText());
+                        try {
+                            handler.lib.fillItBack(handler.con);
+                        } catch (SQLException ex) {
+                            Logger.getLogger(ChangeBookInfoUI.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        AL.setText("Updated");
                     }
-                    AL.setText("Updated");
+                    else{
+                        AL.setText("Invalid borrower id");
+                    }
                 }
                 else{
-                    AL.setText("Invalid borrower id");
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{
@@ -264,15 +274,20 @@ public class ChangeBookInfoUI extends javax.swing.JFrame {
         AL.setText("");
         AL2.setText("");
         if(!BIDTB.getText().equals("")){
-            if(!BIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
-                if(b != null){
-                    TTB.setText(b.getTitle());
-                    ATB.setText(b.getAuthor());
-                    STB.setText(b.getSubject());
+            if(BIDTB.getText().matches("[0-9]+")){
+                if(BIDTB.getText().length() <= 10 && TTB.getText().length() <= 50 && ATB.getText().length() <= 60 && STB.getText().length() <= 40){
+                    Book b = handler.lib.findBook(Integer.parseInt(BIDTB.getText()));
+                    if(b != null){
+                        TTB.setText(b.getTitle());
+                        ATB.setText(b.getAuthor());
+                        STB.setText(b.getSubject());
+                    }
+                    else{
+                        AL.setText("Invalid borrower id");
+                    }
                 }
                 else{
-                    AL.setText("Invalid borrower id");
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{
@@ -288,6 +303,10 @@ public class ChangeBookInfoUI extends javax.swing.JFrame {
         this.hide();
         new LibrarianUI(handler, person).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void STBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_STBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_STBActionPerformed
 
     /**
      * @param args the command line arguments

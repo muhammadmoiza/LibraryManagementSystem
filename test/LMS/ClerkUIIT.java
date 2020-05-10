@@ -35,14 +35,14 @@ public class ClerkUIIT {
         frame = runner.execute(() -> new LMS.UI.ClerkUI(handler, new Clerk(5000, "", "", "", "", 20000, 5000)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
     public void SearchBookTestCase1() throws InterruptedException {
         window.button("SearchBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -51,7 +51,7 @@ public class ClerkUIIT {
     public void PlaceOnHoldTestCase1() throws InterruptedException {
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -60,7 +60,7 @@ public class ClerkUIIT {
     public void ProfileInfoTestCase1() throws InterruptedException {
         window.button("ProfileInfoButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -69,7 +69,7 @@ public class ClerkUIIT {
     public void CheckFineTestCase1() throws InterruptedException {
         window.button("CheckFineButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -78,7 +78,7 @@ public class ClerkUIIT {
     public void RequestQueueTestCase1() throws InterruptedException {
         window.button("RequestQueueButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -87,7 +87,7 @@ public class ClerkUIIT {
     public void CheckInBookTestCase1() throws InterruptedException {
         window.button("CheckInBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -96,7 +96,7 @@ public class ClerkUIIT {
     public void CheckOutBookTestCase1() throws InterruptedException {
        window.button("CheckOutBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -105,7 +105,7 @@ public class ClerkUIIT {
     public void RenewBookTestCase1() throws InterruptedException {
         window.button("RenewBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -114,7 +114,7 @@ public class ClerkUIIT {
     public void AddBorrowerTestCase1() throws InterruptedException {
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -123,7 +123,7 @@ public class ClerkUIIT {
     public void BorrowerInfoTestCase1() throws InterruptedException {
         window.button("BorrowerInfoButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -132,7 +132,7 @@ public class ClerkUIIT {
     public void LogoutTestCase1() throws InterruptedException {
         window.button("LogoutButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }

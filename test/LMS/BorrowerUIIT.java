@@ -35,14 +35,14 @@ public class BorrowerUIIT {
         frame = runner.execute(() -> new LMS.UI.BorrowerUI(handler, new Borrower(1, "", "", "", "")));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
     }
     
     @Test
     public void SearchBookTestCase1() throws InterruptedException {
         window.button("SearchBookButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -51,7 +51,7 @@ public class BorrowerUIIT {
     public void PlaceOnHoldTestCase1() throws InterruptedException {
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -60,7 +60,7 @@ public class BorrowerUIIT {
     public void ProfileInfoTestCase1() throws InterruptedException {
         window.button("ProfileInfoButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -69,7 +69,7 @@ public class BorrowerUIIT {
     public void CheckFineTestCase1() throws InterruptedException {
         window.button("CheckFineButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -78,7 +78,7 @@ public class BorrowerUIIT {
     public void RequestQueueTestCase1() throws InterruptedException {
         window.button("RequestQueueButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -87,7 +87,7 @@ public class BorrowerUIIT {
     public void LogoutTestCase1() throws InterruptedException {
         window.button("LogoutButton").click();
         
-        Thread.sleep(1000);
+//        Thread.sleep(1000);
         
         assertEquals(true, true);
     }

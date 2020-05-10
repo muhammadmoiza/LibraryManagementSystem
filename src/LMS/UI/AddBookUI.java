@@ -177,13 +177,18 @@ public class AddBookUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         AL.setText("");
         if(!TTB.getText().equals("") && !ATB.getText().equals("") && !STB.getText().equals("")){
-            handler.lib.createBook(TTB.getText(), STB.getText(), ATB.getText());
-            try {
-                handler.lib.fillItBack(handler.con);
-            } catch (SQLException ex) {
-                Logger.getLogger(AddBookUI.class.getName()).log(Level.SEVERE, null, ex);
+            if(TTB.getText().length() <= 50 && ATB.getText().length() <= 60 && STB.getText().length() <= 40){
+                handler.lib.createBook(TTB.getText(), STB.getText(), ATB.getText());
+                try {
+                    handler.lib.fillItBack(handler.con);
+                } catch (SQLException ex) {
+                    Logger.getLogger(AddBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                AL.setText("Book added");
             }
-            AL.setText("Book added");
+            else{
+                AL.setText("Word limit of field(s) exceeded");
+            }
         }
         else{
             AL.setText("Field(s) cannot be empty");

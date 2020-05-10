@@ -39,11 +39,11 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler, new Borrower(5000, "", "", "", "")));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("200");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Hold request added"), true);
     }
@@ -54,11 +54,11 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler, new Borrower(5000, "", "", "", "")));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("500000");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Invalid book id"), true);
     }
@@ -69,11 +69,11 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler, new Borrower(5000, "", "", "", "")));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("A1");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
@@ -84,12 +84,27 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler, new Borrower(5000, "", "", "", "")));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void HoldBookBorrowerTestCase5() throws InterruptedException {
+        LMS.UI.HoldBookUI frame;
+        frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler, new Borrower(5000, "", "", "", "")));
+        window = new FrameFixture(frame);
+        window.show(); // shows the frame to test
+//Thread.sleep(1000);
+        window.textBox("BookIDTextBox").enterText("200985485943524959832948594");
+        window.button("PlaceOnHoldButton").click();
+        
+//Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
@@ -98,12 +113,12 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("200");
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals((window.label("Error").text().contains("Hold request added") || (window.label("Error").text().contains("You already have one hold request for this book"))), true);
     }
     
@@ -113,12 +128,12 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("20000");
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Invalid book id"), true);
     }
@@ -129,12 +144,12 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("200A");
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
@@ -145,11 +160,11 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
@@ -160,12 +175,12 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("200");
         window.textBox("BorrowerIDTextBox").enterText("10000");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Invalid book id or borrower id"), true);
     }
@@ -176,12 +191,12 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("200");
         window.textBox("BorrowerIDTextBox").enterText("100BA");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
@@ -192,13 +207,28 @@ public class HoldBookUIIT {
         frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         window.textBox("BookIDTextBox").enterText("200");
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void HoldBookOtherTestCase8() throws InterruptedException {
+        LMS.UI.HoldBookUI frame;
+        frame = runner.execute(() -> new LMS.UI.HoldBookUI(handler,  new Librarian(1, "", "", "", "", 100000, 1)));
+        window = new FrameFixture(frame);
+        window.show(); // shows the frame to test
+//Thread.sleep(1000);
+        window.textBox("BookIDTextBox").enterText("200");
+        window.textBox("BorrowerIDTextBox").enterText("184932589043859489588594300");
+        window.button("PlaceOnHoldButton").click();
+        
+//Thread.sleep(1000);
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     

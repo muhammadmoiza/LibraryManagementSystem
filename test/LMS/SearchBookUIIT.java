@@ -35,7 +35,7 @@ public class SearchBookUIIT {
         frame = runner.execute(() -> new LMS.UI.SearchBookUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
@@ -44,7 +44,7 @@ public class SearchBookUIIT {
         window.textBox("SearchFilterTextBox").enterText("Dic");
         window.button("SearchButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text(), "");
     }
@@ -54,9 +54,20 @@ public class SearchBookUIIT {
         window.radioButton("TitleRadioButton").check();
         window.button("SearchButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.textBox("SearchBox").text().contains("No field(s) can be empty"), true);
+    }
+    
+    @Test
+    public void SearchBookTitleTestCase3() throws InterruptedException {
+        window.radioButton("TitleRadioButton").check();
+        window.textBox("SearchFilterTextBox").enterText("Ddsfdskfskdfksdjkfljsdlkfjksdjfksjdkafjksdjfkjsadkfjksdfksdjfkjkasfkjsdkfsdkfkdakfjsdkjfkldic");
+        window.button("SearchButton").click();
+        
+//Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
@@ -65,7 +76,7 @@ public class SearchBookUIIT {
         window.textBox("SearchFilterTextBox").enterText("Neil");
         window.button("SearchButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text(), "");
     }
@@ -76,9 +87,20 @@ public class SearchBookUIIT {
         window.textBox("SearchFilterTextBox");
         window.button("SearchButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.textBox("SearchBox").text().contains("No field(s) can be empty"), true);
+    }
+    
+    @Test
+    public void SearchBookAuthorTestCase3() throws InterruptedException {
+        window.radioButton("AuthorRadioButton").check();
+        window.textBox("SearchFilterTextBox").enterText("Nefadfjkdsfsjkfhjksdhfjkhsfjkhdskjfhkjsdahfkjsdhfkjhsdkjfhsdkjfhksjdhfkjsdhkjfhskjdil");
+        window.button("SearchButton").click();
+        
+//Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
@@ -87,7 +109,7 @@ public class SearchBookUIIT {
         window.textBox("SearchFilterTextBox").enterText("Misc");
         window.button("SearchButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text(), "");
     }
@@ -98,16 +120,27 @@ public class SearchBookUIIT {
         window.textBox("SearchFilterTextBox");
         window.button("SearchButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.textBox("SearchBox").text().contains("No field(s) can be empty"), true);
+    }
+    
+    @Test
+    public void SearchBookSubjectTestCase3() throws InterruptedException {
+        window.radioButton("SubjectRadioButton").check();
+        window.textBox("SearchFilterTextBox").enterText("Mifsadfsdjkfsdjflkjdlkfjlksdjlkjflkasjdlfjsdkjflksdjflksjflksc");
+        window.button("SearchButton").click();
+        
+//Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
     public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }

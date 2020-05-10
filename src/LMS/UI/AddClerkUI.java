@@ -224,34 +224,40 @@ public class AddClerkUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
             AL.setText("");
             if(!TB1.getText().equals("") && !TB2.getText().equals("") && !TB3.getText().equals("") && !TB4.getText().equals("")){
-                if(!TB3.getText().matches(".*[a-zA-Z]+.*")){
-                    if(!TB4.getText().matches(".*[a-zA-Z]+.*")){
-                        if(isClerk)
-                        {
-                            Clerk c = new Clerk(-1, TB1.getText(), TB2.getText(), TB3.getText(), "-1", Integer.parseInt(TB4.getText()),-1);
-                            handler.lib.addClerk(c);
-                            try {
-                                handler.lib.fillItBack(handler.con);
-                            } catch (SQLException ex) {
-                                Logger.getLogger(AddClerkUI.class.getName()).log(Level.SEVERE, null, ex);
-                            }
-                            AL.setText(TB1.getText() + " as Clerk has been added with ID: " + Integer.toString(c.getID()) + " Password: " + c.getPassword());
-                        }
-                        else
-                        {
-                            Librarian l = new Librarian(-1, TB1.getText(), TB2.getText(), TB3.getText(), "-1", Integer.parseInt(TB4.getText()),-1); 
-                            if(handler.lib.addLibrarian(l))
+                if(TB3.getText().matches("[0-9]+")){
+                    if(TB4.getText().matches("[0-9]+")){
+                        if(TB1.getText().length() <= 40 && TB2.getText().length() <= 60 && TB3.getText().length() <= 30 && TB4.getText().length() <= 10){
+                            if(isClerk)
                             {
+                                Clerk c = new Clerk(-1, TB1.getText(), TB2.getText(), TB3.getText(), "-1", Integer.parseInt(TB4.getText()),-1);
+                                handler.lib.addClerk(c);
                                 try {
                                     handler.lib.fillItBack(handler.con);
                                 } catch (SQLException ex) {
                                     Logger.getLogger(AddClerkUI.class.getName()).log(Level.SEVERE, null, ex);
                                 }
-                                AL.setText(TB1.getText() + " as Librarian has been added with ID: " + Integer.toString(l.getID()) + " Password: " + l.getPassword());
+                                AL.setText(TB1.getText() + " as Clerk has been added with ID: " + Integer.toString(c.getID()) + " Password: " + c.getPassword());
                             }
-                            else{
-                                AL.setText("Library already has one librarian and new Librarian could not be created.");
+                            else
+                            {
+                                Librarian l = new Librarian(-1, TB1.getText(), TB2.getText(), TB3.getText(), "-1", Integer.parseInt(TB4.getText()),-1); 
+                                if(handler.lib.addLibrarian(l))
+                                {
+                                    try {
+                                        handler.lib.fillItBack(handler.con);
+                                    } catch (SQLException ex) {
+                                        Logger.getLogger(AddClerkUI.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                    AL.setText(TB1.getText() + " as Librarian has been added with ID: " + Integer.toString(l.getID()) + " Password: " + l.getPassword());
+                                }
+                                else{
+                                    AL.setText("Library already has one librarian and new Librarian could not be created.");
+                                }
                             }
+                        }
+                        else
+                        {
+                            AL.setText("Word limit of field(s) exceeded");
                         }
                     }
                     else{

@@ -151,14 +151,19 @@ public class RemoveBookUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         AL.setText("");
         if(!BIDTB.getText().equals("")){
-            if(!BIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                String string = handler.lib.removeBookfromLibrary(Integer.parseInt(BIDTB.getText()));
-                try {
-                    handler.lib.fillItBack(handler.con);
-                } catch (SQLException ex) {
-                    Logger.getLogger(RemoveBookUI.class.getName()).log(Level.SEVERE, null, ex);
+            if(BIDTB.getText().matches("[0-9]+")){
+                if(BIDTB.getText().length() <= 10){
+                    String string = handler.lib.removeBookfromLibrary(Integer.parseInt(BIDTB.getText()));
+                    try {
+                        handler.lib.fillItBack(handler.con);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(RemoveBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    AL.setText(string);
                 }
-                AL.setText(string);
+                else{
+                    AL.setText("Word limit of field(s) exceeded");
+                }
             }
             else{
                 AL.setText("ID can only be numbers");

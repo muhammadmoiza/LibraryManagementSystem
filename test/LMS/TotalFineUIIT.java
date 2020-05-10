@@ -35,7 +35,7 @@ public class TotalFineUIIT {
         frame = runner.execute(() -> new LMS.UI.TotalFineUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
@@ -43,7 +43,7 @@ public class TotalFineUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("ComputeTotalFineButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Your total fine is"), true);
     }
@@ -53,7 +53,7 @@ public class TotalFineUIIT {
         window.textBox("BorrowerIDTextBox").enterText("10001");
         window.button("ComputeTotalFineButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error1").text().contains("Invalid borrower id"), true);
     }
@@ -63,7 +63,7 @@ public class TotalFineUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100qwe");
         window.button("ComputeTotalFineButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error1").text().contains("ID can only be numbers"), true);
     }
@@ -72,9 +72,19 @@ public class TotalFineUIIT {
     public void ComputeTotalFineTestCase4() throws InterruptedException {
         window.button("ComputeTotalFineButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error1").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void ComputeTotalFineTestCase5() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("1743289574385798437574300");
+        window.button("ComputeTotalFineButton").click();
+        
+//Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
@@ -82,7 +92,7 @@ public class TotalFineUIIT {
         window.textBox("BorrowerIDTextBox").enterText("100");
         window.button("PaidNowButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Your total fine is"), true);
     }
@@ -92,7 +102,7 @@ public class TotalFineUIIT {
         window.textBox("BorrowerIDTextBox").enterText("10110");
         window.button("PaidNowButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error1").text().contains("Invalid borrower id"), true);
     }
@@ -102,7 +112,7 @@ public class TotalFineUIIT {
         window.textBox("BorrowerIDTextBox").enterText("10ssaf0");
         window.button("PaidNowButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error1").text().contains("ID can only be numbers"), true);
     }
@@ -111,16 +121,26 @@ public class TotalFineUIIT {
     public void PayNowTestCase4() throws InterruptedException {
         window.button("PaidNowButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error1").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void PayNowTestCase5() throws InterruptedException {
+        window.textBox("BorrowerIDTextBox").enterText("5894235395845394543985943100");
+        window.button("PaidNowButton").click();
+        
+//Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
     public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }

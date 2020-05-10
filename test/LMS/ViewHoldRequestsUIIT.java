@@ -35,7 +35,7 @@ public class ViewHoldRequestsUIIT {
         frame = runner.execute(() -> new LMS.UI.ViewHoldRequestsUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
@@ -43,7 +43,7 @@ public class ViewHoldRequestsUIIT {
         window.textBox("BookIDTextBox").enterText("200");
         window.button("ViewRequestsButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(window.label("Error").text(), "");
     }
     
@@ -52,7 +52,7 @@ public class ViewHoldRequestsUIIT {
         window.textBox("BookIDTextBox").enterText("220022");
         window.button("ViewRequestsButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(window.label("Error").text().contains("Invalid book id"), true);
     }
     
@@ -61,7 +61,7 @@ public class ViewHoldRequestsUIIT {
         window.textBox("BookIDTextBox").enterText("2A0A0");
         window.button("ViewRequestsButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
     
@@ -69,15 +69,24 @@ public class ViewHoldRequestsUIIT {
     public void ViewHoldRequestsTestCase4() throws InterruptedException {
         window.button("ViewRequestsButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void ViewHoldRequestsTestCase5() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("82385437584375743589200");
+        window.button("ViewRequestsButton").click();
+        
+//Thread.sleep(1000);
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
     public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(true, true);
     }
     

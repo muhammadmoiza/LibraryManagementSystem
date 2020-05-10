@@ -36,14 +36,14 @@ public class LibrarianUIIT {
         frame = runner.execute(() -> new LMS.UI.LibrarianUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }    
     
     @Test
     public void SearchBook() throws InterruptedException {
         window.button("SearchBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -52,7 +52,7 @@ public class LibrarianUIIT {
     public void PlaceOnHold() throws InterruptedException {
         window.button("PlaceOnHoldButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -61,7 +61,7 @@ public class LibrarianUIIT {
     public void ProfileInfo() throws InterruptedException {
         window.button("ProfileInfoButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -70,7 +70,7 @@ public class LibrarianUIIT {
     public void CheckFine() throws InterruptedException {
         window.button("CheckFineButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -79,7 +79,7 @@ public class LibrarianUIIT {
     public void RequestQueue() throws InterruptedException {
         window.button("RequestQueueButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -88,7 +88,7 @@ public class LibrarianUIIT {
     public void CheckInBook() throws InterruptedException {
         window.button("CheckInBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -97,7 +97,7 @@ public class LibrarianUIIT {
     public void CheckOutBook() throws InterruptedException {
         window.button("CheckOutBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -106,7 +106,7 @@ public class LibrarianUIIT {
     public void RenewBook() throws InterruptedException {
         window.button("RenewBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -115,7 +115,7 @@ public class LibrarianUIIT {
     public void AddBorrower() throws InterruptedException {
         window.button("AddBorrowerButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -124,7 +124,7 @@ public class LibrarianUIIT {
     public void BorrowerInfo() throws InterruptedException {
         window.button("BorrowerInfoButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -133,7 +133,7 @@ public class LibrarianUIIT {
     public void AddBook() throws InterruptedException {
         window.button("AddBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -142,7 +142,7 @@ public class LibrarianUIIT {
     public void RemoveBook() throws InterruptedException {
         window.button("RemoveBookButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -151,7 +151,7 @@ public class LibrarianUIIT {
     public void BookInfo() throws InterruptedException {
         window.button("BookInfoButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -160,7 +160,7 @@ public class LibrarianUIIT {
     public void ClerkInfo() throws InterruptedException {
         window.button("ClerkInfoButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }
@@ -169,7 +169,7 @@ public class LibrarianUIIT {
     public void Logout() throws InterruptedException {
         window.button("LogoutButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }

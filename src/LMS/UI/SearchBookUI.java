@@ -210,24 +210,39 @@ public class SearchBookUI extends javax.swing.JFrame {
         if(!BNTB.getText().equals("")){
             String result = "";
             if(TRB.isSelected()){
-                try {
-                    result = handler.lib.searchForBooks(BNTB.getText(), 1);
-                } catch (IOException ex) {
-                    Logger.getLogger(SearchBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                if(BNTB.getText().length() <= 50){
+                    try {
+                        result = handler.lib.searchForBooks(BNTB.getText(), 1);
+                    } catch (IOException ex) {
+                        Logger.getLogger(SearchBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                else{
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else if(ARB.isSelected()){
-                try {
-                    result = handler.lib.searchForBooks(BNTB.getText(), 3);
-                } catch (IOException ex) {
-                    Logger.getLogger(SearchBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                if(BNTB.getText().length() <= 60){
+                    try {
+                        result = handler.lib.searchForBooks(BNTB.getText(), 3);
+                    } catch (IOException ex) {
+                        Logger.getLogger(SearchBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                else{
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else if(SRB.isSelected()){
-                try {
-                    result = handler.lib.searchForBooks(BNTB.getText(), 2);
-                } catch (IOException ex) {
-                    Logger.getLogger(SearchBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                if(BNTB.getText().length() <= 40){
+                    try {
+                        result = handler.lib.searchForBooks(BNTB.getText(), 2);
+                    } catch (IOException ex) {
+                        Logger.getLogger(SearchBookUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                else{
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             if(!result.equals("")){

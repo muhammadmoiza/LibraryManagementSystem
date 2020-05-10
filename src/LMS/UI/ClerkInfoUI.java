@@ -156,14 +156,19 @@ public class ClerkInfoUI extends javax.swing.JFrame {
     private void VIBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VIBActionPerformed
         AL.setText("");
         if(!CIDTB.getText().equals("")){
-            if(!CIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                Clerk ck = handler.lib.findClerk(Integer.parseInt(CIDTB.getText()));
-                if(ck != null){
-                    String string = ck.toString();
-                    TA.setText(string);
+            if(CIDTB.getText().matches("[0-9]+")){
+                if(CIDTB.getText().length() <= 10){
+                    Clerk ck = handler.lib.findClerk(Integer.parseInt(CIDTB.getText()));
+                    if(ck != null){
+                        String string = ck.toString();
+                        TA.setText(string);
+                    }
+                    else{
+                        AL.setText("Invalid clerk id");
+                    }
                 }
                 else{
-                    AL.setText("Invalid clerk id");
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{

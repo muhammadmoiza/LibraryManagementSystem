@@ -35,7 +35,7 @@ public class MainUIIT {
         frame = runner.execute(() -> new LMS.UI.MainUI(handler));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
@@ -45,7 +45,7 @@ public class MainUIIT {
         window.textBox("LUITB").enterText("lib");
         window.button("LoginButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
 
         assertEquals(true, true);
     }
@@ -56,7 +56,7 @@ public class MainUIIT {
         window.radioButton("MainAdminLoginRadioButton").check();
         window.button("LoginButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
 
         assertEquals(window.label("Error").text().contains("Field cannot be empty"), true);
     }
@@ -68,9 +68,21 @@ public class MainUIIT {
         window.textBox("LUITB").enterText("sdfdskfjkasdfkljk");
         window.button("LoginButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
 
         assertEquals(window.label("Error").text().contains("Incorrect Password"), true);
+    }
+    
+    @Test
+    public void AdminLoginTestCase4() throws InterruptedException {
+        // Successful login
+        window.radioButton("MainAdminLoginRadioButton").check();
+        window.textBox("LUITB").enterText("7dsfkdfjdsklfjskljflksdjflkjk4j3lkj5l3k4jlkjfd8f7sd98fnn3k43k2kj23kd89fsf");
+        window.button("LoginButton").click();
+        
+//Thread.sleep(1000);
+
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
     
     @Test
@@ -81,7 +93,7 @@ public class MainUIIT {
         window.textBox("PTB").enterText("123");
         window.button("LoginButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
 
         assertEquals(true, true);
     }
@@ -94,7 +106,7 @@ public class MainUIIT {
         window.textBox("PTB").enterText("123");
         window.button("LoginButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         assertEquals(window.label("Error").text().contains("Incorrect User Id or Password"), true);
     }
     
@@ -106,7 +118,7 @@ public class MainUIIT {
         window.textBox("PTB").enterText("123");
         window.button("LoginButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
 
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
@@ -118,7 +130,7 @@ public class MainUIIT {
         window.textBox("PTB").enterText("123");
         window.button("LoginButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
 
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }
@@ -130,7 +142,33 @@ public class MainUIIT {
         window.textBox("LUITB").enterText("1");
         window.button("LoginButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
+
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void OtherUserLoginTestCase6() throws InterruptedException {
+        // Successful login
+        window.radioButton("LoginRadioButton").check();
+        window.textBox("LUITB").enterText("239458454753757825473857438757284534598431");
+        window.textBox("PTB").enterText("123");
+        window.button("LoginButton").click();
+        
+//Thread.sleep(1000);
+
+        assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void OtherUserLoginTestCase7() throws InterruptedException {
+        // Successful login
+        window.radioButton("LoginRadioButton").check();
+        window.textBox("LUITB").enterText("1");
+        window.textBox("PTB").enterText("854fnnj43h5hjk2345jkb5b4j54b23j5jk34h5jk43h5jh435j5kj345hjhkj43hjk5h4jj34k5h435j24");
+        window.button("LoginButton").click();
+        
+//Thread.sleep(1000);
 
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
     }

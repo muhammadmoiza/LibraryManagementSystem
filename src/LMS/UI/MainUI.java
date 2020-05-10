@@ -231,28 +231,33 @@ public class MainUI extends javax.swing.JFrame {
         if(LRB.isSelected()){
             if(!LUITB.getText().equals("") && !LPTB.getText().equals(""))
             {
-                if(!LUITB.getText().matches(".*[a-zA-Z]+.*")){
-                    Person person = handler.lib.login(LUITB.getText(), LPTB.getText());
-                    if(person != null){
-                        if(person.getClass().getSimpleName().equals("Clerk"))
-                        {
-                            this.hide();
-                            new ClerkUI(handler, person).setVisible(true);
+                if(LUITB.getText().matches("[0-9]+")){
+                    if(LUITB.getText().length() <= 10 && LPTB.getText().length() <= 30){
+                        Person person = handler.lib.login(LUITB.getText(), LPTB.getText());
+                        if(person != null){
+                            if(person.getClass().getSimpleName().equals("Clerk"))
+                            {
+                                this.hide();
+                                new ClerkUI(handler, person).setVisible(true);
+                            }
+                            else if(person.getClass().getSimpleName().equals("Librarian"))
+                            {
+                                this.hide();
+                                new LibrarianUI(handler, person).setVisible(true);
+                            }
+                            else
+                            {
+                                this.hide();
+                                new BorrowerUI(handler, person).setVisible(true);
+                            }
+
                         }
-                        else if(person.getClass().getSimpleName().equals("Librarian"))
-                        {
-                            this.hide();
-                            new LibrarianUI(handler, person).setVisible(true);
+                        else{
+                            AL.setText("Incorrect User Id or Password");
                         }
-                        else
-                        {
-                            this.hide();
-                            new BorrowerUI(handler, person).setVisible(true);
-                        }
-                        
                     }
                     else{
-                        AL.setText("Incorrect User Id or Password");
+                        AL.setText("Word limit of field(s) exceeded");
                     }
                 }
                 else{
@@ -266,13 +271,18 @@ public class MainUI extends javax.swing.JFrame {
         }
         else if(ALRB.isSelected()){
             if(!LUITB.getText().equals("")){
-                if(LUITB.getText().equals("lib"))
-                {
-                    this.hide();
-                    new AdminUI(handler).setVisible(true);
+                if(LUITB.getText().length() <= 30){
+                    if(LUITB.getText().equals("lib"))
+                    {
+                        this.hide();
+                        new AdminUI(handler).setVisible(true);
+                    }
+                    else{
+                        AL.setText("Incorrect Password");
+                    }
                 }
                 else{
-                    AL.setText("Incorrect Password");
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{

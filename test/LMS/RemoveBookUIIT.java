@@ -35,15 +35,15 @@ public class RemoveBookUIIT {
         frame = runner.execute(() -> new LMS.UI.RemoveBookUI(handler, new Librarian(1, "John", "StreetABC", "0123", "", 100000, 1)));
         window = new FrameFixture(frame);
         window.show(); // shows the frame to test
-        Thread.sleep(1000);
+//Thread.sleep(1000);
     }
     
     @Test
     public void RemoveBookTestCase1() throws InterruptedException {
-        window.textBox("BookIDTextBox").enterText("201");
+        window.textBox("BookIDTextBox").enterText("202");
         window.button("RemoveButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("The book is successfully removed"), true);
     }
@@ -53,7 +53,7 @@ public class RemoveBookUIIT {
         window.textBox("BookIDTextBox").enterText("20102");
         window.button("RemoveButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("No book found against this id"), true);
     }
@@ -63,7 +63,7 @@ public class RemoveBookUIIT {
         window.textBox("BookIDTextBox").enterText("2a0h1");
         window.button("RemoveButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("ID can only be numbers"), true);
     }
@@ -72,16 +72,26 @@ public class RemoveBookUIIT {
     public void RemoveBookTestCase4() throws InterruptedException {
         window.button("RemoveButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(window.label("Error").text().contains("Field(s) cannot be empty"), true);
+    }
+    
+    @Test
+    public void RemoveBookTestCase5() throws InterruptedException {
+        window.textBox("BookIDTextBox").enterText("242545792375437534802");
+        window.button("RemoveButton").click();
+        
+//Thread.sleep(1000);
+        
+        assertEquals(window.label("Error").text().contains("Word limit of field(s) exceeded"), true);
     }
     
     @Test
     public void GoBack() throws InterruptedException {
         window.button("BackButton").click();
         
-        Thread.sleep(1000);
+//Thread.sleep(1000);
         
         assertEquals(true, true);
     }

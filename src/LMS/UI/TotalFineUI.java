@@ -186,13 +186,18 @@ public class TotalFineUI extends javax.swing.JFrame {
     private void CTFBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CTFBActionPerformed
         AL2.setText("");
         if(!BIDTB.getText().equals("")){
-            if(!BIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                Borrower br = handler.lib.findBorrower(Integer.parseInt(BIDTB.getText()));
-                if(br != null){
-                    AL.setText("Your total fine is: " + Integer.toString((int)handler.lib.computeFine2(br)));
+            if(BIDTB.getText().matches("[0-9]+")){
+                if(BIDTB.getText().length() <= 10){
+                    Borrower br = handler.lib.findBorrower(Integer.parseInt(BIDTB.getText()));
+                    if(br != null){
+                        AL.setText("Your total fine is: " + Integer.toString((int)handler.lib.computeFine2(br)));
+                    }
+                    else{
+                        AL2.setText("Invalid borrower id");
+                    }
                 }
                 else{
-                    AL2.setText("Invalid borrower id");
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{
@@ -224,22 +229,27 @@ public class TotalFineUI extends javax.swing.JFrame {
         AL2.setText("");
         Borrower br;
         if(!BIDTB.getText().equals("")){
-            if(!BIDTB.getText().matches(".*[a-zA-Z]+.*")){
-                br = handler.lib.findBorrower(Integer.parseInt(BIDTB.getText()));
-                if(br != null){                    
-                    for (int i = 0; i < handler.lib.getLoans().size(); i++)
-                    {
-                        Loan l = handler.lib.getLoans().get(i);
-
-                        if ((l.getBorrower() == br))
+            if(BIDTB.getText().matches("[0-9]+")){
+                if(BIDTB.getText().length() <= 10){
+                    br = handler.lib.findBorrower(Integer.parseInt(BIDTB.getText()));
+                    if(br != null){                    
+                        for (int i = 0; i < handler.lib.getLoans().size(); i++)
                         {
-                            l.payFine();
+                            Loan l = handler.lib.getLoans().get(i);
+
+                            if ((l.getBorrower() == br))
+                            {
+                                l.payFine();
+                            }
                         }
+                        AL.setText("Your total fine is now 0");
                     }
-                    AL.setText("Your total fine is now 0");
+                    else{
+                        AL2.setText("Invalid borrower id");
+                    }
                 }
                 else{
-                    AL2.setText("Invalid borrower id");
+                    AL.setText("Word limit of field(s) exceeded");
                 }
             }
             else{
