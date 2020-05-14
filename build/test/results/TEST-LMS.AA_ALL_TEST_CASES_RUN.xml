@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="23" hostname="DESKTOP-6H49DRA" name="LMS.AA_ALL_TEST_CASES_RUN" skipped="0" tests="199" time="780.875" timestamp="2020-05-03T08:18:13">
+<testsuite errors="0" failures="23" hostname="DESKTOP-6H49DRA" name="LMS.AA_ALL_TEST_CASES_RUN" skipped="0" tests="196" time="702.893" timestamp="2020-05-13T23:14:48">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -60,7 +60,7 @@
     <property name="libs.j2me_common_ant.maven-pom" value="" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner LMS.AA_ALL_TEST_CASES_RUN skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\itsme\Desktop\Project\build\test\results\TEST-LMS.AA_ALL_TEST_CASES_RUN.xml crashfile=C:\Users\itsme\Desktop\Project\build\junitvmwatcher7465068729348607376.properties propsfile=C:\Users\itsme\Desktop\Project\build\junit5429013433403243700.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner LMS.AA_ALL_TEST_CASES_RUN skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\itsme\Desktop\Project\build\test\results\TEST-LMS.AA_ALL_TEST_CASES_RUN.xml crashfile=C:\Users\itsme\Desktop\Project\build\junitvmwatcher2590643798492175303.properties propsfile=C:\Users\itsme\Desktop\Project\build\junit1833509527797170088.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="jnlp.descriptor" value="application" />
@@ -106,7 +106,7 @@
     <property name="javac.debug" value="true" />
     <property name="javadoc.splitindex" value="true" />
     <property name="file.separator" value="\" />
-    <property name="javac.includesfile.binary" value="C:\Users\itsme\Desktop\Project\null503143010" />
+    <property name="javac.includesfile.binary" value="C:\Users\itsme\Desktop\Project\null1269322940" />
     <property name="mkdist.disabled" value="false" />
     <property name="javac.test.processorpath" value="C:\Users\itsme\Desktop\sqljdbc4-chs-4.0.2206.100.jar:C:\Users\itsme\Desktop\junit-4.13.jar:C:\Users\itsme\Desktop\hamcrest-core-1.3.jar:C:\Users\itsme\Desktop\assertj-core-3.8.0.jar:C:\Users\itsme\Desktop\assertj-swing-3.8.0.jar:C:\Users\itsme\Desktop\fest-util-1.2.5.jar:C:\Program Files\NetBeans 8.0.2\java\modules\ext\beansbinding-1.2.1.jar:build/classes:derbyclient-10.2.2.0.jar" />
     <property name="netbeans.buildnumber" value="201411181905" />
@@ -120,7 +120,6 @@
     <property name="libs.hibernate4-persistencemodelgen.javadoc" value="" />
     <property name="libs.jaxb.javadoc" value="C:\Program Files\NetBeans 8.0.2\ide\docs\jaxb-api-doc.zip" />
     <property name="libs.struts.classpath" value="C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\antlr-2.7.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\bsf-2.3.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-beanutils-1.8.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-chain-1.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-digester-1.8.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-fileupload-1.1.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-io-1.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-logging-1.0.4.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\commons-validator-1.3.1.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\jstl-1.0.2.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\oro-2.0.8.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\standard-1.0.6.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-core-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-el-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-extras-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-faces-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-mailreader-dao-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-scripting-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-taglib-1.3.10.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\struts\struts-tiles-1.3.10.jar" />
-    <property name="org.openide.awt.SwingBrowserImpl.do-not-block-awt" value="false" />
     <property name="javac.includes.binary" value="C:\Users\itsme\Desktop\Project\build\test\classes\LMS\AA_ALL_TEST_CASES_RUN.class" />
     <property name="ant.home" value="C:\Program Files\NetBeans 8.0.2\extide\ant" />
     <property name="ant.file.Library_Management_System-impl" value="C:\Users\itsme\Desktop\Project\nbproject\build-impl.xml" />
@@ -293,8 +292,8 @@
     <property name="ap.cmd.line.internal" value="" />
     <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
     <property name="libs.jsp-compilation-syscp.javadoc" value="" />
-    <property name="libs.eclipselinkmodelgen.javadoc" value="" />
     <property name="libs.javaee-endorsed-api-7.0.classpath" value="C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\javax.annotation-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\javax.xml.soap-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jaxb-api-osgi.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jaxws-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\javaee7-endorsed\jsr181-api.jar" />
+    <property name="libs.eclipselinkmodelgen.javadoc" value="" />
     <property name="libs.metro.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\metro-1.4-doc.zip" />
     <property name="libs.struts.maven-pom" value="" />
     <property name="netbeans.home+have.tests" value="true" />
@@ -304,10 +303,10 @@
     <property name="work.dir" value="C:\Users\itsme\Desktop\Project" />
     <property name="libs.jaxb.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb-impl.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb-xjc.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\jaxb1-impl.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\api\jaxb-api.jar;C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\api\jsr173_1.0_api.jar" />
     <property name="do.depend" value="false" />
-    <property name="libs.j2me_common_ant.classpath" value="C:\Program Files\NetBeans 8.0.2\mobility\modules\org-netbeans-modules-j2me-common-ant.jar;C:\Program Files\NetBeans 8.0.2\java\modules\org-netbeans-modules-classfile.jar" />
     <property name="dist.javadoc.dir" value="dist/javadoc" />
-    <property name="libs.spring-webmvc3.0.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-webmvc-3.2.7.RELEASE.jar" />
+    <property name="libs.j2me_common_ant.classpath" value="C:\Program Files\NetBeans 8.0.2\mobility\modules\org-netbeans-modules-j2me-common-ant.jar;C:\Program Files\NetBeans 8.0.2\java\modules\org-netbeans-modules-classfile.jar" />
     <property name="libs.swing-layout.classpath" value="C:\Program Files\NetBeans 8.0.2\platform\modules\ext\swing-layout-1.0.4.jar" />
+    <property name="libs.spring-webmvc3.0.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\spring-3.0\spring-webmvc-3.2.7.RELEASE.jar" />
     <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
     <property name="libs.restlib.src" value="" />
     <property name="javac.source" value="1.8" />
@@ -325,39 +324,38 @@
     <property name="built-jar.properties" value="C:\Users\itsme\Desktop\Project\build\built-jar.properties" />
     <property name="build.test.classes.dir" value="build/test/classes" />
     <property name="src.dir" value="src" />
-    <property name="sun.awt.keepWorkingSetOnMinimize" value="true" />
     <property name="libs.jpa2-persistence.src" value="" />
     <property name="annotation.processing.enabled" value="true" />
+    <property name="sun.awt.keepWorkingSetOnMinimize" value="true" />
     <property name="libs.jsf20.src" value="" />
     <property name="libs.jpa20-persistence.src" value="" />
     <property name="libs.DataBindingME-SVG.maven-pom" value="" />
     <property name="libs.jsf12.src" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.maven-pom" value="" />
     <property name="libs.struts.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\struts-1.3.10-javadoc.zip" />
-    <property name="ignore.failing.tests" value="true" />
     <property name="libs.javaee-web-api-7.0.src" value="" />
     <property name="libs.primefaces.src" value="" />
     <property name="dist.dir" value="dist" />
     <property name="libs.groovy-all.javadoc" value="" />
     <property name="testng.debug.mode" value="" />
-    <property name="libs.groovy-all.classpath" value="C:\Program Files\NetBeans 8.0.2\groovy\modules\ext\groovy-all.jar" />
     <property name="javac.fork" value="true" />
+    <property name="libs.groovy-all.classpath" value="C:\Program Files\NetBeans 8.0.2\groovy\modules\ext\groovy-all.jar" />
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
     <property name="default.javac.source" value="1.8" />
     <property name="debug-transport-by-os" value="dt_shmem" />
-    <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
     <property name="build.test.results.dir" value="build/test/results" />
     <property name="java.runtime.version" value="1.8.0_181-b13" />
     <property name="default.javac.target" value="1.8" />
     <property name="user.timezone" value="" />
     <property name="nb.junit.single" value="false" />
     <property name="do.jar" value="true" />
-    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
     <property name="netbeans.dirs" value="C:\Program Files\NetBeans 8.0.2\nb;C:\Program Files\NetBeans 8.0.2\ergonomics;C:\Program Files\NetBeans 8.0.2\ide;C:\Program Files\NetBeans 8.0.2\extide;C:\Program Files\NetBeans 8.0.2\java;C:\Program Files\NetBeans 8.0.2\apisupport;C:\Program Files\NetBeans 8.0.2\webcommon;C:\Program Files\NetBeans 8.0.2\websvccommon;C:\Program Files\NetBeans 8.0.2\enterprise;C:\Program Files\NetBeans 8.0.2\mobility;C:\Program Files\NetBeans 8.0.2\profiler;C:\Program Files\NetBeans 8.0.2\python;C:\Program Files\NetBeans 8.0.2\php;C:\Program Files\NetBeans 8.0.2\identity;C:\Program Files\NetBeans 8.0.2\harness;C:\Program Files\NetBeans 8.0.2\cnd;C:\Program Files\NetBeans 8.0.2\dlight;C:\Program Files\NetBeans 8.0.2\groovy;C:\Program Files\NetBeans 8.0.2\extra;C:\Program Files\NetBeans 8.0.2\javacard;C:\Program Files\NetBeans 8.0.2\javafx" />
-    <property name="libs.jstl.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
     <property name="libs.jsf20.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="libs.jstl.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_181\jre\lib\ext;C:\Windows\Sun\Java\lib\ext" />
     <property name="libs.metro.src" value="" />
     <property name="endorsed.classpath" value="" />
@@ -365,8 +363,8 @@
     <property name="excludes" value="" />
     <property name="libs.restlib.maven-pom" value="" />
     <property name="libs.metro.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\activation.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-extra-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-extra.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-rt.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\metro\webservices-tools.jar" />
-    <property name="config" value="1" />
     <property name="libs.jpa2-persistence.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\docs\javax.persistence-2.1.0-doc.zip" />
+    <property name="config" value="1" />
     <property name="libs.DataBindingME.javadoc" value="C:\Program Files\NetBeans 8.0.2\mobility\modules\docs\netbeans_databindingme-api.zip" />
     <property name="java.class.path" value="C:\Users\itsme\Desktop\sqljdbc4-chs-4.0.2206.100.jar;C:\Users\itsme\Desktop\junit-4.13.jar;C:\Users\itsme\Desktop\hamcrest-core-1.3.jar;C:\Users\itsme\Desktop\assertj-core-3.8.0.jar;C:\Users\itsme\Desktop\assertj-swing-3.8.0.jar;C:\Users\itsme\Desktop\fest-util-1.2.5.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\beansbinding-1.2.1.jar;C:\Users\itsme\Desktop\Project\build\classes;C:\Users\itsme\Desktop\Project\derbyclient-10.2.2.0.jar;C:\Users\itsme\Desktop\Project\build\test\classes;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-launcher.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-junit.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-junit4.jar" />
     <property name="apple.laf.useScreenMenuBar" value="true" />
@@ -386,9 +384,9 @@
     <property name="ant.file.type.Library_Management_System-impl" value="file" />
     <property name="libs.restlib.javadoc" value="" />
     <property name="libs.JAXB-ENDORSED.classpath" value="C:\Program Files\NetBeans 8.0.2\ide\modules\ext\jaxb\api\jaxb-api.jar" />
-    <property name="nb.internal.action.name" value="test.single" />
-    <property name="libs.javaee-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
+    <property name="nb.internal.action.name" value="run.single" />
     <property name="libs.eclipselink.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\eclipselink\eclipselink.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\eclipselink\javax.persistence_2.1.0.v201304241213.jar;C:\Program Files\NetBeans 8.0.2\java\modules\ext\eclipselink\org.eclipse.persistence.jpa.jpql_2.5.2.v20140319-9ad6abd.jar" />
+    <property name="libs.javaee-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
     <property name="libs.beans-binding.javadoc" value="C:\Program Files\NetBeans 8.0.2\java\docs\beansbinding-1.2.1-doc.zip" />
     <property name="java.vm.vendor" value="Oracle Corporation" />
@@ -406,11 +404,11 @@
     <property name="libs.jsf12.maven-pom" value="" />
     <property name="jnlp.signing" value="" />
     <property name="libs.hibernate4-persistencemodelgen.classpath" value="C:\Program Files\NetBeans 8.0.2\java\modules\ext\hibernate4\hibernate-jpamodelgen-4.3.1.Final.jar" />
-    <property name="jnlp.signed" value="false" />
     <property name="annotation.processing.source.output" value="build/generated-sources/ap-source-output" />
+    <property name="jnlp.signed" value="false" />
     <property name="main.class" value="LMS.Main" />
-    <property name="libs.CopyLibs.src" value="" />
     <property name="build.dir" value="build" />
+    <property name="libs.CopyLibs.src" value="" />
     <property name="libs.jsp-compilation.classpath" value="C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\servlet3.1-jsp2.3-api.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\glassfish-jspparser-4.0.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\jsf-2_2\javax.faces.jar;C:\Program Files\NetBeans 8.0.2\enterprise\modules\ext\jstl-api.jar;C:\Program Files\NetBeans 8.0.2\extide\ant\lib\ant-launcher.jar" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.4 compiled on April 29 2014" />
     <property name="file.encoding" value="Cp1252" />
@@ -422,297 +420,294 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="libs.javaee-web-api-7.0.javadoc" value="C:\Program Files\NetBeans 8.0.2\enterprise\docs\javaee-doc-api.jar" />
   </properties>
-  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase1" time="6.144" />
-  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase2" time="2.949" />
-  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase3" time="4.515" />
-  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase4" time="4.393" />
-  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase5" time="20.661" />
-  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase6" time="14.593" />
-  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase7" time="14.206" />
-  <testcase classname="LMS.AddBookUIIT" name="GoBack" time="0.827" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase1" time="6.839" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase2" time="7.955" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase3" time="7.735" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase4" time="4.333" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase5" time="5.075" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase6" time="6.098" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase7" time="6.075" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase8" time="15.367" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase9" time="13.975" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase10" time="14.011" />
-  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase11" time="9.821" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase1" time="5.753" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase2" time="6.531" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase3" time="6.388" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase4" time="4.682" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase5" time="3.855" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase6" time="4.761" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase7" time="4.703" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase8" time="14.118" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase9" time="17.239" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase1" time="6.073" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase2" time="6.938" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase3" time="7.02" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase4" time="4.605" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase5" time="4.079" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase6" time="5.213" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase7" time="5.321" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase8" time="14.605" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase9" time="15.675" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase10" time="11.658" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase11" time="8.455" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase10" time="13.397" />
-  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase11" time="7.867" />
-  <testcase classname="LMS.AdminUIIT" name="LogoutTestCase1" time="0.793" />
-  <testcase classname="LMS.AdminUIIT" name="ViewBooksTestCase1" time="0.795" />
-  <testcase classname="LMS.AdminUIIT" name="AddClerkTestCase1" time="0.897" />
-  <testcase classname="LMS.AdminUIIT" name="AddLibrarianTestCase1" time="0.93" />
-  <testcase classname="LMS.AdminUIIT" name="ViewIssueHistoryTestCase1" time="0.952" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerAddressTestCase1" time="5.18" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerAddressTestCase2" time="2.116" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerAddressTestCase3" time="14.579" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerNameTestCase1" time="5.275" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerNameTestCase2" time="2.378" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerNameTestCase3" time="13.834" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="DisplayBorrowerProfileTestCase1" time="1.41" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="DisplayBorrowerProfileTestCase2" time="1.539" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="DisplayBorrowerProfileTestCase3" time="2.946" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="DisplayBorrowerProfileTestCase4" time="5.247" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPasswordTestCase1" time="2.809" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPasswordTestCase2" time="2.215" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPasswordTestCase3" time="2.161" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPhoneTestCase1" time="2.785" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPhoneTestCase2" time="4.83" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPhoneTestCase3" time="2.141" />
-  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPhoneTestCase4" time="8.599" />
-  <testcase classname="LMS.BorrowerUIIT" name="ProfileInfoTestCase1" time="0.793" />
-  <testcase classname="LMS.BorrowerUIIT" name="LogoutTestCase1" time="0.795" />
-  <testcase classname="LMS.BorrowerUIIT" name="RequestQueueTestCase1" time="0.836" />
-  <testcase classname="LMS.BorrowerUIIT" name="CheckFineTestCase1" time="0.843" />
-  <testcase classname="LMS.BorrowerUIIT" name="SearchBookTestCase1" time="0.886" />
-  <testcase classname="LMS.BorrowerUIIT" name="PlaceOnHoldTestCase1" time="0.792" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookSubjectTestCase1" time="4.869" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookSubjectTestCase2" time="2.761" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookSubjectTestCase3" time="17.229">
+  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase1" time="6.34" />
+  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase2" time="2.847" />
+  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase3" time="4.242" />
+  <testcase classname="LMS.AddBookUIIT" name="AddBookTestCase4" time="4.398" />
+  <testcase classname="LMS.AddBookUIIT" name="GoBack" time="0.807" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase1" time="6.833" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase2" time="7.656" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase3" time="7.644" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase4" time="4.169" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase5" time="5.024" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase6" time="6.05" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase7" time="6.051" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase8" time="15.362" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase9" time="13.911" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase10" time="14.014" />
+  <testcase classname="LMS.AddBorrowerUIIT" name="AddBorrowerTestCase11" time="9.82" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase1" time="5.483" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase2" time="6.502" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase3" time="6.299" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase4" time="4.365" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase5" time="3.463" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase6" time="4.705" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase7" time="4.702" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase8" time="14.124" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase9" time="17.261" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase1" time="6.082" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase2" time="6.894" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase3" time="6.894" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase4" time="4.482" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase5" time="4.062" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase6" time="5.19" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase7" time="5.305" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase8" time="14.606" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase9" time="15.701" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase10" time="11.617" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewLibrarianTestCase11" time="8.495" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase10" time="13.413" />
+  <testcase classname="LMS.AddClerkUIIT" name="AddNewClerkTestCase11" time="7.884" />
+  <testcase classname="LMS.AdminUIIT" name="LogoutTestCase1" time="0.804" />
+  <testcase classname="LMS.AdminUIIT" name="ViewBooksTestCase1" time="0.821" />
+  <testcase classname="LMS.AdminUIIT" name="AddClerkTestCase1" time="0.83" />
+  <testcase classname="LMS.AdminUIIT" name="AddLibrarianTestCase1" time="0.84" />
+  <testcase classname="LMS.AdminUIIT" name="ViewIssueHistoryTestCase1" time="0.818" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerAddressTestCase1" time="5.005" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerAddressTestCase2" time="2.125" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerAddressTestCase3" time="14.522" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerNameTestCase1" time="4.887" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerNameTestCase2" time="2.13" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerNameTestCase3" time="13.423" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="DisplayBorrowerProfileTestCase1" time="1.337" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="DisplayBorrowerProfileTestCase2" time="1.45" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="DisplayBorrowerProfileTestCase3" time="2.334" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="DisplayBorrowerProfileTestCase4" time="5.171" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPasswordTestCase1" time="2.185" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPasswordTestCase2" time="2.188" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPasswordTestCase3" time="2.186" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPhoneTestCase1" time="2.79" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPhoneTestCase2" time="4.829" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPhoneTestCase3" time="2.132" />
+  <testcase classname="LMS.BorrowerInfoUIIT" name="ChangeBorrowerPhoneTestCase4" time="8.551" />
+  <testcase classname="LMS.BorrowerUIIT" name="ProfileInfoTestCase1" time="0.804" />
+  <testcase classname="LMS.BorrowerUIIT" name="LogoutTestCase1" time="0.799" />
+  <testcase classname="LMS.BorrowerUIIT" name="RequestQueueTestCase1" time="0.82" />
+  <testcase classname="LMS.BorrowerUIIT" name="CheckFineTestCase1" time="0.812" />
+  <testcase classname="LMS.BorrowerUIIT" name="SearchBookTestCase1" time="0.821" />
+  <testcase classname="LMS.BorrowerUIIT" name="PlaceOnHoldTestCase1" time="0.816" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookSubjectTestCase1" time="4.799" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookSubjectTestCase2" time="2.119" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookSubjectTestCase3" time="16.876">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.ChangeBookInfoUIIT.UpdateBookSubjectTestCase3(ChangeBookInfoUIIT.java:245)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookSubjectTestCase4" time="13.549">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookSubjectTestCase4" time="13.524">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.ChangeBookInfoUIIT.UpdateBookSubjectTestCase4(ChangeBookInfoUIIT.java:259)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase1" time="1.35">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase1" time="1.33">
     <failure message="expected:&lt;[Invalid borrower id]&gt; but was:&lt;[]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;[Invalid borrower id]&gt; but was:&lt;[]&gt;
 	at LMS.ChangeBookInfoUIIT.GetBookTestCase1(ChangeBookInfoUIIT.java:48)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase2" time="1.601" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase3" time="2.338" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase4" time="1.303" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase5" time="3.957" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookTitleTestCase1" time="4.606">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase2" time="1.572" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase3" time="2.233" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase4" time="0.799" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="GetBookTestCase5" time="3.858" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookTitleTestCase1" time="4.516">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.ChangeBookInfoUIIT.UpdateBookTitleTestCase1(ChangeBookInfoUIIT.java:102)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookTitleTestCase2" time="2.12" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookTitleTestCase3" time="13.05">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookTitleTestCase2" time="2.117" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookTitleTestCase3" time="13.053">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.ChangeBookInfoUIIT.UpdateBookTitleTestCase3(ChangeBookInfoUIIT.java:132)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookTitleTestCase4" time="17.87">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookTitleTestCase4" time="17.86">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.ChangeBookInfoUIIT.UpdateBookTitleTestCase4(ChangeBookInfoUIIT.java:147)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookAuthorTestCase1" time="2.277">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookAuthorTestCase1" time="2.18">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.ChangeBookInfoUIIT.UpdateBookAuthorTestCase1(ChangeBookInfoUIIT.java:161)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookAuthorTestCase2" time="2.157" />
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookAuthorTestCase3" time="2.299">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookAuthorTestCase2" time="2.133" />
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookAuthorTestCase3" time="2.159">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.ChangeBookInfoUIIT.UpdateBookAuthorTestCase3(ChangeBookInfoUIIT.java:189)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookAuthorTestCase4" time="2.378">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="UpdateBookAuthorTestCase4" time="2.174">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.ChangeBookInfoUIIT.UpdateBookAuthorTestCase4(ChangeBookInfoUIIT.java:203)
 </failure>
   </testcase>
-  <testcase classname="LMS.ChangeBookInfoUIIT" name="GoBack" time="0.817" />
-  <testcase classname="LMS.ClerkInfoUIIT" name="ShowClerkInfoTestCase1" time="1.077">
+  <testcase classname="LMS.ChangeBookInfoUIIT" name="GoBack" time="0.792" />
+  <testcase classname="LMS.ClerkInfoUIIT" name="ShowClerkInfoTestCase1" time="1.093">
     <failure message="expected:&lt;[Invalid clerk id]&gt; but was:&lt;[]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;[Invalid clerk id]&gt; but was:&lt;[]&gt;
 	at LMS.ClerkInfoUIIT.ShowClerkInfoTestCase1(ClerkInfoUIIT.java:47)
 </failure>
   </testcase>
-  <testcase classname="LMS.ClerkInfoUIIT" name="ShowClerkInfoTestCase2" time="1.465" />
-  <testcase classname="LMS.ClerkInfoUIIT" name="ShowClerkInfoTestCase3" time="1.854" />
-  <testcase classname="LMS.ClerkInfoUIIT" name="ShowClerkInfoTestCase4" time="3.667">
+  <testcase classname="LMS.ClerkInfoUIIT" name="ShowClerkInfoTestCase2" time="1.453" />
+  <testcase classname="LMS.ClerkInfoUIIT" name="ShowClerkInfoTestCase3" time="1.759" />
+  <testcase classname="LMS.ClerkInfoUIIT" name="ShowClerkInfoTestCase4" time="3.494">
     <failure message="expected:&lt;true&gt; but was:&lt;&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;true&gt; but was:&lt;&gt;
 	at LMS.ClerkInfoUIIT.ShowClerkInfoTestCase4(ClerkInfoUIIT.java:74)
 </failure>
   </testcase>
-  <testcase classname="LMS.ClerkInfoUIIT" name="GoBack" time="0.788" />
-  <testcase classname="LMS.ClerkUIIT" name="CheckInBookTestCase1" time="0.797" />
-  <testcase classname="LMS.ClerkUIIT" name="ProfileInfoTestCase1" time="0.875" />
-  <testcase classname="LMS.ClerkUIIT" name="RenewBookTestCase1" time="0.91" />
-  <testcase classname="LMS.ClerkUIIT" name="LogoutTestCase1" time="1.075" />
-  <testcase classname="LMS.ClerkUIIT" name="AddBorrowerTestCase1" time="0.85" />
-  <testcase classname="LMS.ClerkUIIT" name="CheckOutBookTestCase1" time="0.8" />
-  <testcase classname="LMS.ClerkUIIT" name="RequestQueueTestCase1" time="0.792" />
-  <testcase classname="LMS.ClerkUIIT" name="CheckFineTestCase1" time="1.043" />
-  <testcase classname="LMS.ClerkUIIT" name="BorrowerInfoTestCase1" time="0.901" />
-  <testcase classname="LMS.ClerkUIIT" name="SearchBookTestCase1" time="1.157" />
-  <testcase classname="LMS.ClerkUIIT" name="PlaceOnHoldTestCase1" time="0.894" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase1" time="1.975">
+  <testcase classname="LMS.ClerkInfoUIIT" name="GoBack" time="0.801" />
+  <testcase classname="LMS.ClerkUIIT" name="CheckInBookTestCase1" time="0.805" />
+  <testcase classname="LMS.ClerkUIIT" name="ProfileInfoTestCase1" time="0.817" />
+  <testcase classname="LMS.ClerkUIIT" name="RenewBookTestCase1" time="0.826" />
+  <testcase classname="LMS.ClerkUIIT" name="LogoutTestCase1" time="0.84" />
+  <testcase classname="LMS.ClerkUIIT" name="AddBorrowerTestCase1" time="0.828" />
+  <testcase classname="LMS.ClerkUIIT" name="CheckOutBookTestCase1" time="0.828" />
+  <testcase classname="LMS.ClerkUIIT" name="RequestQueueTestCase1" time="0.826" />
+  <testcase classname="LMS.ClerkUIIT" name="CheckFineTestCase1" time="0.827" />
+  <testcase classname="LMS.ClerkUIIT" name="BorrowerInfoTestCase1" time="0.829" />
+  <testcase classname="LMS.ClerkUIIT" name="SearchBookTestCase1" time="0.83" />
+  <testcase classname="LMS.ClerkUIIT" name="PlaceOnHoldTestCase1" time="0.803" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase1" time="1.881">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.HoldBookUIIT.HoldBookOtherTestCase1(HoldBookUIIT.java:122)
 </failure>
   </testcase>
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase2" time="2.102" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase3" time="2.235" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase4" time="1.308" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase5" time="2.087" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase6" time="2.596" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase7" time="1.448" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase8" time="4.975" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase1" time="2.596">
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase2" time="2.098" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase3" time="2.205" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase4" time="1.327" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase5" time="2.091" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase6" time="2.545" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase7" time="1.33" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookOtherTestCase8" time="4.75" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase1" time="1.329">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.HoldBookUIIT.HoldBookBorrowerTestCase1(HoldBookUIIT.java:48)
 </failure>
   </testcase>
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase2" time="1.757" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase3" time="1.536" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase4" time="0.941" />
-  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase5" time="4.838">
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase2" time="1.694" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase3" time="1.429" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase4" time="0.802" />
+  <testcase classname="LMS.HoldBookUIIT" name="HoldBookBorrowerTestCase5" time="4.214">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.HoldBookUIIT.HoldBookBorrowerTestCase5(HoldBookUIIT.java:107)
 </failure>
   </testcase>
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase1" time="2.293">
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase1" time="1.862">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.IssueBookUIIT.IssueBookTestCase1(IssueBookUIIT.java:48)
 </failure>
   </testcase>
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase2" time="2.971" />
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase3" time="2.323" />
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase4" time="1.497" />
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase5" time="2.336" />
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase6" time="2.701">
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase2" time="2.108" />
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase3" time="2.203" />
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase4" time="1.33" />
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase5" time="2.218" />
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase6" time="2.545">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.IssueBookUIIT.IssueBookTestCase6(IssueBookUIIT.java:102)
 </failure>
   </testcase>
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase7" time="1.355" />
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase8" time="4.737" />
-  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase9" time="4.748">
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase7" time="1.334" />
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase8" time="4.627" />
+  <testcase classname="LMS.IssueBookUIIT" name="IssueBookTestCase9" time="4.381">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.IssueBookUIIT.IssueBookTestCase9(IssueBookUIIT.java:134)
 </failure>
   </testcase>
-  <testcase classname="LMS.IssueBookUIIT" name="GoBack" time="0.794" />
-  <testcase classname="LMS.LibrarianInfoUIIT" name="ShowLibrarianInfo" time="0.885" />
-  <testcase classname="LMS.LibrarianUIIT" name="Logout" time="0.807" />
-  <testcase classname="LMS.LibrarianUIIT" name="CheckFine" time="0.907" />
-  <testcase classname="LMS.LibrarianUIIT" name="AddBorrower" time="0.796" />
-  <testcase classname="LMS.LibrarianUIIT" name="BorrowerInfo" time="0.891" />
-  <testcase classname="LMS.LibrarianUIIT" name="RemoveBook" time="0.801" />
-  <testcase classname="LMS.LibrarianUIIT" name="CheckOutBook" time="0.942" />
-  <testcase classname="LMS.LibrarianUIIT" name="RenewBook" time="0.924" />
-  <testcase classname="LMS.LibrarianUIIT" name="AddBook" time="1.021" />
-  <testcase classname="LMS.LibrarianUIIT" name="ClerkInfo" time="0.834" />
-  <testcase classname="LMS.LibrarianUIIT" name="SearchBook" time="0.899" />
-  <testcase classname="LMS.LibrarianUIIT" name="RequestQueue" time="1.031" />
-  <testcase classname="LMS.LibrarianUIIT" name="PlaceOnHold" time="0.899" />
-  <testcase classname="LMS.LibrarianUIIT" name="ProfileInfo" time="1.08" />
-  <testcase classname="LMS.LibrarianUIIT" name="BookInfo" time="0.931" />
-  <testcase classname="LMS.LibrarianUIIT" name="CheckInBook" time="0.827" />
-  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase1" time="1.771" />
-  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase2" time="2.137" />
-  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase3" time="1.946" />
-  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase4" time="1.436" />
-  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase5" time="1.132" />
-  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase6" time="6.659">
+  <testcase classname="LMS.IssueBookUIIT" name="GoBack" time="0.802" />
+  <testcase classname="LMS.LibrarianInfoUIIT" name="ShowLibrarianInfo" time="0.81" />
+  <testcase classname="LMS.LibrarianUIIT" name="Logout" time="0.809" />
+  <testcase classname="LMS.LibrarianUIIT" name="CheckFine" time="0.83" />
+  <testcase classname="LMS.LibrarianUIIT" name="AddBorrower" time="0.814" />
+  <testcase classname="LMS.LibrarianUIIT" name="BorrowerInfo" time="0.833" />
+  <testcase classname="LMS.LibrarianUIIT" name="RemoveBook" time="0.816" />
+  <testcase classname="LMS.LibrarianUIIT" name="CheckOutBook" time="0.804" />
+  <testcase classname="LMS.LibrarianUIIT" name="RenewBook" time="0.827" />
+  <testcase classname="LMS.LibrarianUIIT" name="AddBook" time="0.807" />
+  <testcase classname="LMS.LibrarianUIIT" name="ClerkInfo" time="0.813" />
+  <testcase classname="LMS.LibrarianUIIT" name="SearchBook" time="0.82" />
+  <testcase classname="LMS.LibrarianUIIT" name="RequestQueue" time="0.826" />
+  <testcase classname="LMS.LibrarianUIIT" name="PlaceOnHold" time="0.822" />
+  <testcase classname="LMS.LibrarianUIIT" name="ProfileInfo" time="0.801" />
+  <testcase classname="LMS.LibrarianUIIT" name="BookInfo" time="0.815" />
+  <testcase classname="LMS.LibrarianUIIT" name="CheckInBook" time="0.817" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase1" time="1.677" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase2" time="2.125" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase3" time="1.868" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase4" time="1.332" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase5" time="1.088" />
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase6" time="6.547">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.MainUIIT.OtherUserLoginTestCase6(MainUIIT.java:160)
 </failure>
   </testcase>
-  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase7" time="11.506">
+  <testcase classname="LMS.MainUIIT" name="OtherUserLoginTestCase7" time="11.112">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.MainUIIT.OtherUserLoginTestCase7(MainUIIT.java:173)
 </failure>
   </testcase>
-  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase1" time="2.222" />
-  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase2" time="1.679" />
-  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase3" time="3.517" />
-  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase4" time="10.704">
+  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase1" time="1.565" />
+  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase2" time="1.031" />
+  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase3" time="3.245" />
+  <testcase classname="LMS.MainUIIT" name="AdminLoginTestCase4" time="9.971">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.MainUIIT.AdminLoginTestCase4(MainUIIT.java:85)
 </failure>
   </testcase>
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase1" time="1.718">
+  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase1" time="1.328">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.RemoveBookUIIT.RemoveBookTestCase1(RemoveBookUIIT.java:48)
 </failure>
   </testcase>
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase2" time="1.927" />
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase3" time="1.667" />
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase4" time="0.806" />
-  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase5" time="4.045" />
-  <testcase classname="LMS.RemoveBookUIIT" name="GoBack" time="0.926" />
-  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase1" time="2.361">
+  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase2" time="1.567" />
+  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase3" time="1.563" />
+  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase4" time="0.799" />
+  <testcase classname="LMS.RemoveBookUIIT" name="RemoveBookTestCase5" time="3.488" />
+  <testcase classname="LMS.RemoveBookUIIT" name="GoBack" time="0.804" />
+  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase1" time="2.102">
     <failure message="expected:&lt;false&gt; but was:&lt;true&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;false&gt; but was:&lt;true&gt;
 	at LMS.RenewBookUIIT.RenewBookIssueTestCase1(RenewBookUIIT.java:100)
 </failure>
   </testcase>
-  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase2" time="2.402" />
-  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase3" time="2.582" />
-  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase4" time="1.643" />
-  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase5" time="4.589" />
-  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase1" time="1.439" />
-  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase2" time="1.561" />
-  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase3" time="1.52" />
-  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase4" time="0.812" />
-  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase5" time="3.712" />
-  <testcase classname="LMS.RenewBookUIIT" name="GoBack" time="1.106" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookTitleTestCase1" time="1.971" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookTitleTestCase2" time="0.973" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookTitleTestCase3" time="12.534" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookAuthorTestCase1" time="2.223" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookAuthorTestCase2" time="1.472" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookAuthorTestCase3" time="12.983" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookSubjectTestCase1" time="2.09" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookSubjectTestCase2" time="1.453" />
-  <testcase classname="LMS.SearchBookUIIT" name="SearchBookSubjectTestCase3" time="9.552" />
-  <testcase classname="LMS.SearchBookUIIT" name="GoBack" time="1.036" />
-  <testcase classname="LMS.ShowBooksUIIT" name="ViewIssueHistoryTestCase1" time="0.985" />
-  <testcase classname="LMS.ShowBooksUIIT" name="ViewAllBooksTestCase1" time="1.207" />
-  <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase1" time="1.394" />
-  <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase2" time="1.662" />
-  <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase3" time="1.799" />
+  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase2" time="2.342" />
+  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase3" time="2.577" />
+  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase4" time="1.553" />
+  <testcase classname="LMS.RenewBookUIIT" name="RenewBookIssueTestCase5" time="4.498" />
+  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase1" time="1.329" />
+  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase2" time="1.572" />
+  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase3" time="1.455" />
+  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase4" time="0.803" />
+  <testcase classname="LMS.RenewBookUIIT" name="GetBooksTestCase5" time="3.62" />
+  <testcase classname="LMS.RenewBookUIIT" name="GoBack" time="0.804" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookTitleTestCase1" time="1.565" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookTitleTestCase2" time="0.828" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookTitleTestCase3" time="12.376" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookAuthorTestCase1" time="1.91" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookAuthorTestCase2" time="1.034" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookAuthorTestCase3" time="11.664" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookSubjectTestCase1" time="1.901" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookSubjectTestCase2" time="1.017" />
+  <testcase classname="LMS.SearchBookUIIT" name="SearchBookSubjectTestCase3" time="8.876" />
+  <testcase classname="LMS.SearchBookUIIT" name="GoBack" time="0.808" />
+  <testcase classname="LMS.ShowBooksUIIT" name="ViewIssueHistoryTestCase1" time="0.802" />
+  <testcase classname="LMS.ShowBooksUIIT" name="ViewAllBooksTestCase1" time="0.798" />
+  <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase1" time="1.331" />
+  <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase2" time="1.566" />
+  <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase3" time="1.805" />
   <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase4" time="0.794" />
-  <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase5" time="4.429" />
-  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase1" time="1.582" />
-  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase2" time="1.645" />
-  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase3" time="1.832" />
-  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase4" time="0.92" />
-  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase5" time="4.081" />
-  <testcase classname="LMS.TotalFineUIIT" name="GoBack" time="0.827" />
-  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase1" time="1.452">
+  <testcase classname="LMS.TotalFineUIIT" name="PayNowTestCase5" time="4.333" />
+  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase1" time="1.323" />
+  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase2" time="1.569" />
+  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase3" time="1.699" />
+  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase4" time="0.793" />
+  <testcase classname="LMS.TotalFineUIIT" name="ComputeTotalFineTestCase5" time="3.981" />
+  <testcase classname="LMS.TotalFineUIIT" name="GoBack" time="0.79" />
+  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase1" time="1.33">
     <failure message="expected:&lt;[Invalid book id]&gt; but was:&lt;[]&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;[Invalid book id]&gt; but was:&lt;[]&gt;
 	at LMS.ViewHoldRequestsUIIT.ViewHoldRequestsTestCase1(ViewHoldRequestsUIIT.java:47)
 </failure>
   </testcase>
-  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase2" time="1.998" />
-  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase3" time="2.033" />
-  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase4" time="0.859" />
-  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase5" time="3.861" />
-  <testcase classname="LMS.ViewHoldRequestsUIIT" name="GoBack" time="1.046" />
+  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase2" time="1.694" />
+  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase3" time="1.998" />
+  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase4" time="0.797" />
+  <testcase classname="LMS.ViewHoldRequestsUIIT" name="ViewHoldRequestsTestCase5" time="3.736" />
+  <testcase classname="LMS.ViewHoldRequestsUIIT" name="GoBack" time="0.799" />
   <system-out><![CDATA[DB Connected
 No clerks Found in Library
 1
@@ -722,21 +717,6 @@ No Books on Hold Yet!
 Book with Title sample book title 1 is successfully created.
 CLEARING NOW!
 PERSON CLEARED!
-DB Connected
-No clerks Found in Library
-1
-100
-No Books on Hold Yet!
-DB Connected
-No clerks Found in Library
-1
-100
-No Books on Hold Yet!
-DB Connected
-No clerks Found in Library
-1
-100
-No Books on Hold Yet!
 DB Connected
 No clerks Found in Library
 1
@@ -2274,7 +2254,7 @@ No Books Issued Yet!
 No Books on Hold Yet!
 No Borrower has borrowed yet from Library
 ]]></system-out>
-  <system-err><![CDATA[May 03, 2020 1:25:51 PM LMS.UI.ChangeBookInfoUI jButton1ActionPerformed
+  <system-err><![CDATA[May 14, 2020 4:21:31 AM LMS.UI.ChangeBookInfoUI jButton1ActionPerformed
 SEVERE: null
 com.microsoft.sqlserver.jdbc.SQLServerException: String or binary data would be truncated.
 	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:216)
@@ -2287,9 +2267,9 @@ com.microsoft.sqlserver.jdbc.SQLServerException: String or binary data would be 
 	at com.microsoft.sqlserver.jdbc.SQLServerStatement.executeStatement(SQLServerStatement.java:155)
 	at com.microsoft.sqlserver.jdbc.SQLServerPreparedStatement.executeUpdate(SQLServerPreparedStatement.java:314)
 	at LMS.Library.fillItBack(Library.java:992)
-	at LMS.UI.ChangeBookInfoUI.jButton1ActionPerformed(ChangeBookInfoUI.java:241)
-	at LMS.UI.ChangeBookInfoUI.access$100(ChangeBookInfoUI.java:16)
-	at LMS.UI.ChangeBookInfoUI$2.actionPerformed(ChangeBookInfoUI.java:89)
+	at LMS.UI.ChangeBookInfoUI.jButton1ActionPerformed(ChangeBookInfoUI.java:246)
+	at LMS.UI.ChangeBookInfoUI.access$200(ChangeBookInfoUI.java:16)
+	at LMS.UI.ChangeBookInfoUI$3.actionPerformed(ChangeBookInfoUI.java:94)
 	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
 	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
 	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
